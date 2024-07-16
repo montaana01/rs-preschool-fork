@@ -1,0 +1,20 @@
+@import 'base/_fonts.scss';
+@import 'base/_variables.scss';
+@import 'base/_assets.scss';
+
+
+* {
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+
+@import 'blocks/_header.scss';
+@import 'blocks/_start_screen.scss';
+

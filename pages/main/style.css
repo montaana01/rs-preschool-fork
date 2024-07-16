@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"), url("/assets/fonts/georgia.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Italic"), url("/assets/fonts/georgiai.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold"), url("/assets/fonts/georgiab.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold Italic"), url("/assets/fonts/georgiaz.woff") format("woff");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"), url("/assets/fonts/Arial-ItalicMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-ItalicMT.woff") format("woff"), url("/assets/fonts/Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-Bold.eot");
+  src: local("Arial Narrow Bold"), local("ArialNarrow-Bold"), url("/assets/fonts/ArialNarrow-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow-Bold.woff") format("woff"), url("/assets/fonts/ArialNarrow-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-BoldItalicMT.eot");
+  src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), url("/assets/fonts/Arial-BoldItalicMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-BoldItalicMT.woff") format("woff"), url("/assets/fonts/Arial-BoldItalicMT.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow.eot");
+  src: local("Arial Narrow"), local("ArialNarrow"), url("/assets/fonts/ArialNarrow.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow.woff") format("woff"), url("/assets/fonts/ArialNarrow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-Italic.eot");
+  src: local("Arial Narrow Italic"), local("ArialNarrow-Italic"), url("/assets/fonts/ArialNarrow-Italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow-Italic.woff") format("woff"), url("/assets/fonts/ArialNarrow-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"), url("/assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialMT.woff") format("woff"), url("/assets/fonts/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-BoldMT.eot");
+  src: local("Arial Bold"), local("Arial-BoldMT"), url("/assets/fonts/Arial-BoldMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-BoldMT.woff") format("woff"), url("/assets/fonts/Arial-BoldMT.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-Black.eot");
+  src: local("Arial Black"), local("Arial-Black"), url("/assets/fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-Black.woff") format("woff"), url("/assets/fonts/Arial-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-BoldItalic.eot");
+  src: local("Arial Narrow Bold Italic"), local("ArialNarrow-BoldItalic"), url("/assets/fonts/ArialNarrow-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow-BoldItalic.woff") format("woff"), url("/assets/fonts/ArialNarrow-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+h2 {
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #545454;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+}
+p.l {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4c4c4c;
+}
+p.s {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #b2b2b2;
+}
+
+button {
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+  color: #292929;
+  background-color: #f1cdb3;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+button:hover {
+  background-color: #fddcc4;
+}
+
+.border {
+  border: 2px solid #f1cdb3;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+}
+
+.title {
+  margin: 0;
+  color: #f1cdb3;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.subtitle {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.link {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.link:hover {
+  color: #fafafa;
+}
+.link_black {
+  color: #545454;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.link_black:hover {
+  color: #292929;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  bottom: -3px;
+  height: 3px;
+  background-color: #f1cdb3;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header {
+  height: 60px;
+}
+.header_wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_title {
+  line-height: 35px;
+}
+.header_subtitle {
+  padding: 10px 0 0 4px;
+  line-height: 15px;
+}
+.header_navigation > ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav_item {
+  padding-right: 35px;
+}
+
+.nav_item:last-child {
+  padding-right: 0;
+}
+
+.start_screen {
+  padding-top: 180px;
+  width: 100%;
+  background: url(/assets/images/bg/start_bg.png) center center/cover no-repeat;
+}
+.start_screen_wrapper {
+  height: 728px;
+  display: flex;
+  justify-content: space-between;
+}
+.start_screen_wrapper-item h2 {
+  margin-top: 163px;
+  width: 310px;
+  color: #fff;
+}
+.start_screen_wrapper-item p {
+  margin-top: 42px;
+  width: 460px;
+  color: #cdcdcd;
+}
+.start_screen_wrapper-itemimg {
+  width: 698px;
+  height: 728px;
+}
+.start_screen_wrapper-item button {
+  margin-top: 42px;
+}
+.start_screen_button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}

@@ -1,0 +1,109 @@
+h2{
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: $dark-l;
+}
+h3{
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $dark-l;
+
+}
+h4{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $dark-l;
+}
+h5{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $dark-l;
+}
+p{
+  font-family: "Arial", sans-serif;
+  &.l{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: $dark-xl;
+  }
+  &.s{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: $dark-m;
+  }
+}
+
+button{
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+  color: $dark-3xl;
+  background-color: $primary;
+  cursor: pointer;
+  transition: 0.5s all;
+  &:hover{
+    background-color: $primary-light;
+  }
+}
+.border{
+  border: 2px solid $primary;
+  background-color: $color-light-xl;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+}
+.title{
+  margin: 0;
+  color: $primary;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.subtitle{
+  font-family: "Arial", sans-serif;
+  color: $color-light-xl;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+.link{
+  text-decoration: none;
+  color: $dark-s;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  cursor: pointer;
+  transition: 0.5s all;
+  &:hover{
+    color:$light-s;
+  }
+  &_black{
+    color: $dark-l;
+    cursor: pointer;
+    transition: 0.5s all;
+    &:hover{
+      color:$dark-3xl;
+    }
+  }
+}
+.active::after{
+  content: "";
+  display: block;
+  bottom: -3px;
+  height: 3px;
+  background-color: $primary;
+  width: 100%;
+}
