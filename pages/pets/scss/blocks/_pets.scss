@@ -1,0 +1,41 @@
+.pets{
+  padding: 80px 0 100px 0;
+  width: 100%;
+  background: $light-l;
+  &_header{
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+  }
+  &_wrapper{
+    margin-top: 45px;
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-rows: repeat(2,435px);
+    grid-auto-columns: 270px;
+    grid-auto-flow: column;
+    overflow: hidden;
+    column-gap: 40px;
+    row-gap: 30px;
+    &-item{
+      border-radius: 9px;
+      width: 270px;
+      height: 435px;
+      background-color: $light-s;
+      h4{
+        margin-top: 30px;
+        text-align: center;
+      }
+      button{
+        margin: 30px 35px;
+      }
+    }
+  }
+  &_button{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+}

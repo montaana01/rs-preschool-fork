@@ -1,0 +1,40 @@
+header{
+  position: relative;
+}
+
+.header {
+  &_wrapper {
+    background-color: $color-light-xl;
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_title{
+    line-height: 35px;
+  }
+  &_subtitle {
+    padding: 10px 0 0 4px;
+    line-height: 15px;
+  }
+
+  &_navigation > ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+.nav_item {
+  padding-right: 35px;
+}
+.nav_item:last-child {
+  padding-right: 0;
+}
+
+.pets_header_title{
+  color: $dark-l;
+}
+.pets_header_subtitle{
+  color: $dark-3xl;
+}

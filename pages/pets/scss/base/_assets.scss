@@ -42,6 +42,12 @@ p{
     color: $dark-m;
   }
 }
+.l {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: $dark-l;
+}
 
 button{
   border-radius: 100px;
@@ -98,9 +104,6 @@ button{
       color:$dark-3xl;
     }
   }
-}
-.active{
-  color:$light-s;
 }
 .active::after{
   content: "";
