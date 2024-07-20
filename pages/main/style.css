@@ -138,9 +138,14 @@ button {
   padding: 15px 45px;
   width: 207px;
   height: 52px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: #292929;
   background-color: #f1cdb3;
   cursor: pointer;
+  border: 0;
   transition: 0.5s all;
 }
 button:hover {
@@ -287,4 +292,101 @@ header {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.06em;
+}
+
+.about_wrapper {
+  padding: 80px 175px 100px 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_textarea {
+  width: 430px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+.pets {
+  padding: 80px 0 100px 0;
+  width: 100%;
+  background: #f6f6f6;
+}
+.pets_header {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+}
+.pets_carousel {
+  position: relative;
+}
+.pets_arrows {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.pets_arrow {
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.pets_arrow > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pets_arrow:hover {
+  border: 2px solid #cdcdcd;
+}
+.pets_arrow:hover > svg > path {
+  fill: #cdcdcd;
+}
+.pets_wrapper {
+  margin: 0 105px;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  grid-template-rows: 435px;
+  grid-auto-columns: 270px;
+  grid-auto-flow: column;
+  overflow: hidden;
+  column-gap: 90px;
+}
+.pets_wrapper-item {
+  border-radius: 9px;
+  width: 270px;
+  height: 435px;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.pets_wrapper-item h4 {
+  margin-top: 30px;
+  text-align: center;
+}
+.pets_wrapper-item > button {
+  margin: 30px 35px;
+}
+.pets_wrapper-item:hover {
+  background: #fff;
+}
+.pets_wrapper-item:hover > button {
+  background-color: #fddcc4;
+}
+.pets_button {
+  display: block;
+  margin: 60px auto 0 auto;
+  width: 261px;
+  height: 52px;
 }

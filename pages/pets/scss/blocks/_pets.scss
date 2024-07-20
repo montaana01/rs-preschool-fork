@@ -14,7 +14,7 @@
     grid-template-columns: repeat(auto-fill, 270px);
     grid-template-rows: repeat(2,435px);
     grid-auto-columns: 270px;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     overflow: hidden;
     column-gap: 40px;
     row-gap: 30px;
@@ -37,5 +37,49 @@
     font-size: 16px;
     line-height: 130%;
     letter-spacing: 0.06em;
+  }
+  &_carousel{
+    margin: 0 auto;
+    padding-top: 45px;
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+    align-items: center;
+    &-item{
+      position: relative;
+      display: block;
+      border: 2px solid $dark-s;
+      border-radius: 100px;
+      width: 48px;
+      height: 48px;
+      span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &>.prev, &>.start{
+      color: $dark-s;
+      cursor: pointer;
+    }
+    &>.prev:hover, &>.start:hover{
+      color: $dark-3xl;
+    }
+    &>.number{
+      background: $primary;
+      border: 2px solid $primary;
+    }
+    &>.number:hover{
+      scale: 1.02;
+    }
+    &>.next, &>.end{
+      border: 2px solid $primary;
+      color: $dark-3xl;
+    }
+    &>.next:hover, &>.end:hover{
+      color: $dark-s;
+    }
+
   }
 }

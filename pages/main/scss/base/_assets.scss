@@ -48,9 +48,14 @@ button{
   padding: 15px 45px;
   width: 207px;
   height: 52px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: $dark-3xl;
   background-color: $primary;
   cursor: pointer;
+  border: 0;
   transition: 0.5s all;
   &:hover{
     background-color: $primary-light;

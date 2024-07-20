@@ -1,0 +1,88 @@
+.pets {
+  padding: 80px 0 100px 0;
+  width: 100%;
+  background: $light-l;
+
+  &_header {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+  }
+  &_carousel{
+    position: relative;
+  }
+  &_arrows{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &_arrow {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    border: 2px solid $primary;
+    transition: 0.5s all;
+    cursor: pointer;
+    &>svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover{
+        border: 2px solid $dark-s;
+      &>svg>path{
+          fill: $dark-s;
+      }
+    }
+  }
+  &_wrapper {
+    margin: 0 105px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-rows: 435px;
+    grid-auto-columns: 270px;
+    grid-auto-flow: column;
+    overflow: hidden;
+    column-gap: 90px;
+
+    &-item {
+      border-radius: 9px;
+      width: 270px;
+      height: 435px;
+      background-color: $light-s;
+
+      h4 {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      &>button {
+        margin: 30px 35px;
+      }
+      cursor: pointer;
+      transition: 0.5s all;
+      &:hover{
+        background: $color-light-xl;
+        &>button{
+          background-color: $primary-light;
+        }
+      }
+    }
+  }
+
+  &_button{
+    display: block;
+    margin: 60px auto 0 auto;
+    width: 261px;
+    height: 52px;
+  }
+}

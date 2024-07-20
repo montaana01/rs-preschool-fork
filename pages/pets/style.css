@@ -145,6 +145,10 @@ button {
   padding: 15px 45px;
   width: 207px;
   height: 52px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: #292929;
   background-color: #f1cdb3;
   cursor: pointer;
@@ -278,7 +282,7 @@ header {
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: repeat(2, 435px);
   grid-auto-columns: 270px;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   overflow: hidden;
   column-gap: 40px;
   row-gap: 30px;
@@ -301,4 +305,47 @@ header {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.06em;
+}
+.pets_carousel {
+  margin: 0 auto;
+  padding-top: 45px;
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pets_carousel-item {
+  position: relative;
+  display: block;
+  border: 2px solid #cdcdcd;
+  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+}
+.pets_carousel-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pets_carousel > .prev, .pets_carousel > .start {
+  color: #cdcdcd;
+  cursor: pointer;
+}
+.pets_carousel > .prev:hover, .pets_carousel > .start:hover {
+  color: #292929;
+}
+.pets_carousel > .number {
+  background: #f1cdb3;
+  border: 2px solid #f1cdb3;
+}
+.pets_carousel > .number:hover {
+  scale: 1.02;
+}
+.pets_carousel > .next, .pets_carousel > .end {
+  border: 2px solid #f1cdb3;
+  color: #292929;
+}
+.pets_carousel > .next:hover, .pets_carousel > .end:hover {
+  color: #cdcdcd;
 }
