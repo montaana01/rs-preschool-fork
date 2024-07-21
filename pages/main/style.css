@@ -347,10 +347,7 @@ header {
   transform: translate(-50%, -50%);
 }
 .pets_arrow:hover {
-  border: 2px solid #cdcdcd;
-}
-.pets_arrow:hover > svg > path {
-  fill: #cdcdcd;
+  background-color: #f1cdb3;
 }
 .pets_wrapper {
   margin: 0 105px;
@@ -389,4 +386,35 @@ header {
   margin: 60px auto 0 auto;
   width: 261px;
   height: 52px;
+}
+
+.help {
+  padding: 80px 0 100px 0;
+}
+.help h3 {
+  text-align: center;
+}
+.help_wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
+  gap: 55px 120px;
+}
+.help_wrapper-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 113px;
+}
+.help_wrapper-item_image {
+  text-align: center;
+}
+.help_wrapper-item_image svg {
+  width: 60px;
+}
+
+.donation {
+  padding: 80px 0 100px 0;
 }

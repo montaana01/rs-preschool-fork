@@ -37,10 +37,7 @@
       transform: translate(-50%, -50%);
     }
     &:hover{
-        border: 2px solid $dark-s;
-      &>svg>path{
-          fill: $dark-s;
-      }
+      background-color: $primary;
     }
   }
   &_wrapper {
