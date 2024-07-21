@@ -349,3 +349,59 @@ header {
 .pets_carousel > .next:hover, .pets_carousel > .end:hover {
   color: #cdcdcd;
 }
+
+footer {
+  background: url("/assets/images/bg/footer-background.png") center center/cover no-repeat;
+  height: 350px;
+}
+
+.footer {
+  padding-top: 40px;
+}
+.footer h3 {
+  color: #fff;
+}
+.footer a {
+  text-decoration: none;
+  color: #f1cdb3;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.footer a:hover {
+  scale: 1.05;
+}
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 160px;
+}
+.footer_wrapper-item {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.footer_wrapper-item svg {
+  flex-shrink: 0;
+}
+.footer_wrapper-item .problem {
+  width: 255px;
+}
+.footer_wrapper-item.mt32 {
+  margin-top: 32px;
+}
+.footer_wrapper-item.mt34 {
+  margin-top: 34px;
+}
+.footer_contacts {
+  padding-top: 16px;
+}
+.footer_contacts .footer_wrapper-item {
+  height: 32px;
+}
+.footer_address {
+  padding-top: 16px;
+}
+.footer_image {
+  font-size: 0;
+}

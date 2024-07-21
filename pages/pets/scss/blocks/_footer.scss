@@ -1,0 +1,56 @@
+footer{
+  background: url('/assets/images/bg/footer-background.png') center center / cover no-repeat;
+  height: 350px;
+}
+.footer{
+  padding-top: 40px;
+  h3{
+    color: $color-light-xl;
+  }
+  a{
+    text-decoration: none;
+    color: $primary;
+    cursor: pointer;
+    transition: 0.5s all;
+  }
+  a:hover{
+    scale: 1.05;
+  }
+  &_wrapper{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 160px;
+    &-item{
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      a{
+      }
+      svg{
+        flex-shrink: 0;
+      }
+      .problem{
+        width: 255px;
+      }
+      &.mt32{
+        margin-top: 32px;
+      }
+      &.mt34{
+        margin-top: 34px;
+      }
+    }
+  }
+  &_contacts{
+    padding-top: 16px;
+    .footer_wrapper-item{
+      height: 32px;
+    }
+  }
+  &_address{
+    padding-top: 16px;
+  }
+  &_image{
+    font-size: 0;
+  }
+}
