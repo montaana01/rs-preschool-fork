@@ -9,7 +9,8 @@
     flex-flow: row wrap;
     justify-content: center;
     align-content: space-between;
-    gap: 55px 120px;
+    row-gap: 55px;
+    column-gap: 120px;
     &-item{
       display: flex;
       flex-direction: column;

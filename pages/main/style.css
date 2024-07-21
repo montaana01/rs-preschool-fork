@@ -400,7 +400,8 @@ header {
   flex-flow: row wrap;
   justify-content: center;
   align-content: space-between;
-  gap: 55px 120px;
+  row-gap: 55px;
+  column-gap: 120px;
 }
 .help_wrapper-item {
   display: flex;
@@ -416,5 +417,37 @@ header {
 }
 
 .donation {
-  padding: 80px 0 100px 0;
+  background: #f6f6f6;
+}
+.donation_wrapper {
+  padding: 80px 143px 100px 142px;
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.donation_wrapper-item h5 {
+  margin-top: 20px;
+}
+.donation_wrapper-item_bank {
+  margin-top: 20px;
+  display: inline-flex;
+  background: #f1cdb3;
+  justify-content: space-between;
+  column-gap: 15px;
+  border-radius: 9px;
+  padding: 10px 15px;
+}
+.donation_wrapper p {
+  margin-top: 20px;
+  width: 380px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+}
+.donation_textarea {
+  width: 430px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
 }

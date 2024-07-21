@@ -1,3 +1,38 @@
 .donation{
-  padding: 80px 0 100px 0;
+  background: $light-l;
+  &_wrapper{
+    padding: 80px 143px 100px 142px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    &-item{
+      h5{
+        margin-top: 20px;
+      }
+      &_bank{
+        margin-top: 20px;
+        display:inline-flex;
+        background: $primary;
+        justify-content: space-between;
+        column-gap: 15px;
+        border-radius: 9px;
+        padding: 10px 15px;
+      }
+    }
+    p{
+      margin-top: 20px;
+      width: 380px;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+
+  &_textarea{
+    width: 430px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 }
