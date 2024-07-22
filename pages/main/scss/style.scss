@@ -1,0 +1,31 @@
+@import 'base/_fonts.scss';
+@import 'base/_variables.scss';
+@import 'base/_assets.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+  a{
+    text-decoration: none;
+  }
+}
+
+.container {
+  width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+
+@import 'blocks/_header.scss';
+@import 'blocks/_not_only.scss';
+@import 'blocks/_about.scss';
+@import 'blocks/_pets.scss';
+@import 'blocks/_help.scss';
+@import 'blocks/_donation.scss';
+@import 'blocks/_footer.scss';
+
+

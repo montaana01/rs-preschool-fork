@@ -1,0 +1,450 @@
+@font-face {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"), url("/assets/fonts/georgia.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Italic"), url("/assets/fonts/georgiai.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold"), url("/assets/fonts/georgiab.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold Italic"), url("/assets/fonts/georgiaz.woff") format("woff");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"), url("/assets/fonts/Arial-ItalicMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-ItalicMT.woff") format("woff"), url("/assets/fonts/Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-Bold.eot");
+  src: local("Arial Narrow Bold"), local("ArialNarrow-Bold"), url("/assets/fonts/ArialNarrow-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow-Bold.woff") format("woff"), url("/assets/fonts/ArialNarrow-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-BoldItalicMT.eot");
+  src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), url("/assets/fonts/Arial-BoldItalicMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-BoldItalicMT.woff") format("woff"), url("/assets/fonts/Arial-BoldItalicMT.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow.eot");
+  src: local("Arial Narrow"), local("ArialNarrow"), url("/assets/fonts/ArialNarrow.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow.woff") format("woff"), url("/assets/fonts/ArialNarrow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-Italic.eot");
+  src: local("Arial Narrow Italic"), local("ArialNarrow-Italic"), url("/assets/fonts/ArialNarrow-Italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow-Italic.woff") format("woff"), url("/assets/fonts/ArialNarrow-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"), url("/assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialMT.woff") format("woff"), url("/assets/fonts/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-BoldMT.eot");
+  src: local("Arial Bold"), local("Arial-BoldMT"), url("/assets/fonts/Arial-BoldMT.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-BoldMT.woff") format("woff"), url("/assets/fonts/Arial-BoldMT.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-Black.eot");
+  src: local("Arial Black"), local("Arial-Black"), url("/assets/fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Arial-Black.woff") format("woff"), url("/assets/fonts/Arial-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-BoldItalic.eot");
+  src: local("Arial Narrow Bold Italic"), local("ArialNarrow-BoldItalic"), url("/assets/fonts/ArialNarrow-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ArialNarrow-BoldItalic.woff") format("woff"), url("/assets/fonts/ArialNarrow-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+h2 {
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #545454;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+}
+p.l {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4c4c4c;
+}
+p.s {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #b2b2b2;
+}
+
+button {
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: #f1cdb3;
+  cursor: pointer;
+  border: 0;
+  transition: 0.5s all;
+}
+button:hover {
+  background-color: #fddcc4;
+}
+
+.border {
+  border: 2px solid #f1cdb3;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+}
+
+.title {
+  margin: 0;
+  color: #f1cdb3;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.subtitle {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.link {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.link:hover {
+  color: #fafafa;
+}
+.link a {
+  text-decoration: none;
+  color: #cdcdcd;
+  transition: 0.5s all;
+}
+.link a:hover {
+  color: #fafafa;
+}
+.link_black {
+  color: #545454;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.link_black a {
+  text-decoration: none;
+  color: #545454;
+  transition: 0.5s all;
+}
+.link_black a:hover {
+  color: #292929;
+}
+.link_black:hover {
+  color: #292929;
+}
+
+.active {
+  color: #fafafa;
+}
+
+.link_black.active {
+  color: #545454;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  bottom: -3px;
+  height: 3px;
+  background-color: #f1cdb3;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+}
+
+.header_wrapper {
+  background-color: #fff;
+  padding: 30px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_title {
+  line-height: 35px;
+}
+.header_subtitle {
+  padding: 10px 0 0 4px;
+  line-height: 15px;
+}
+.header_navigation > ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav_item {
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  padding-right: 35px;
+}
+
+.nav_item:last-child {
+  padding-right: 0;
+}
+
+.pets_header_title {
+  color: #545454;
+}
+
+.pets_header_subtitle {
+  color: #292929;
+}
+
+.pets {
+  padding: 80px 0 100px 0;
+  width: 100%;
+  background: #f6f6f6;
+}
+.pets_header {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+}
+.pets_wrapper {
+  margin-top: 45px;
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  grid-template-rows: repeat(2, 435px);
+  grid-auto-columns: 270px;
+  grid-auto-flow: row;
+  overflow: hidden;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+.pets_wrapper-item {
+  border-radius: 9px;
+  width: 270px;
+  height: 435px;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.pets_wrapper-item img {
+  display: block;
+  line-height: 0;
+}
+.pets_wrapper-item h4 {
+  margin-top: 30px;
+  text-align: center;
+}
+.pets_wrapper-item > button {
+  display: block;
+  width: 187px;
+  padding: 15px 42px;
+  margin: 30px auto;
+}
+.pets_wrapper-item:hover {
+  background: #fff;
+}
+.pets_wrapper-item:hover > button {
+  background-color: #fddcc4;
+}
+.pets_button {
+  padding: 0;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+.pets_carousel {
+  margin: 0 auto;
+  padding-top: 45px;
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pets_carousel-item {
+  position: relative;
+  display: block;
+  border: 2px solid #cdcdcd;
+  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+}
+.pets_carousel-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pets_carousel > .prev, .pets_carousel > .start {
+  color: #cdcdcd;
+  cursor: pointer;
+}
+.pets_carousel > .prev:hover, .pets_carousel > .start:hover {
+  color: #292929;
+}
+.pets_carousel > .number {
+  background: #f1cdb3;
+  border: 2px solid #f1cdb3;
+}
+.pets_carousel > .number:hover {
+  scale: 1.02;
+}
+.pets_carousel > .next, .pets_carousel > .end {
+  border: 2px solid #f1cdb3;
+  color: #292929;
+}
+.pets_carousel > .next:hover, .pets_carousel > .end:hover {
+  color: #cdcdcd;
+}
+
+footer {
+  background: url("/assets/images/bg/footer-background.png") center center/cover no-repeat;
+  height: 350px;
+}
+
+.footer {
+  padding-top: 40px;
+}
+.footer h3 {
+  color: #fff;
+}
+.footer a {
+  text-decoration: none;
+  color: #f1cdb3;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.footer a:hover {
+  scale: 1.05;
+}
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 160px;
+}
+.footer_wrapper-item {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.footer_wrapper-item svg {
+  flex-shrink: 0;
+}
+.footer_wrapper-item .problem {
+  width: 255px;
+}
+.footer_wrapper-item.mt32 {
+  margin-top: 32px;
+}
+.footer_wrapper-item.mt34 {
+  margin-top: 34px;
+}
+.footer_contacts {
+  padding-top: 16px;
+}
+.footer_contacts .footer_wrapper-item {
+  height: 32px;
+}
+.footer_address {
+  padding-top: 16px;
+}
+.footer_image {
+  font-size: 0;
+}

@@ -1,0 +1,40 @@
+header{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header {
+  height: 60px;
+  &_wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_title{
+    line-height: 35px;
+  }
+  &_subtitle {
+    padding: 10px 0 0 4px;
+    line-height: 15px;
+  }
+
+  &_navigation > ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+.nav_item {
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  padding-right: 35px;
+}
+.nav_item:last-child {
+  padding-right: 0;
+}

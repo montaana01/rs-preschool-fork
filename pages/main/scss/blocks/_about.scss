@@ -1,0 +1,15 @@
+.about{
+  &_wrapper{
+    padding: 80px 175px 100px 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_textarea{
+    width: 430px;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+}
