@@ -2,10 +2,15 @@
 @import 'base/_variables.scss';
 @import 'base/_assets.scss';
 
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   font-family: "Georgia", sans-serif;
+  a{
+    text-decoration: none;
+  }
 }
 
 .container {
@@ -16,7 +21,7 @@
 
 
 @import 'blocks/_header.scss';
-@import 'blocks/_start_screen.scss';
+@import 'blocks/_not_only.scss';
 @import 'blocks/_about.scss';
 @import 'blocks/_pets.scss';
 @import 'blocks/_help.scss';

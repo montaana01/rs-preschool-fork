@@ -23,18 +23,34 @@
       width: 270px;
       height: 435px;
       background-color: $light-s;
+      img{
+        display: block;
+        line-height: 0;
+      }
       h4{
         margin-top: 30px;
         text-align: center;
       }
-      button{
-        margin: 30px 35px;
+      &>button {
+        display: block;
+        width: 187px;
+        padding: 15px 42px;
+        margin: 30px auto;
+      }
+      cursor: pointer;
+      transition: 0.5s all;
+      &:hover{
+        background: $color-light-xl;
+        &>button{
+          background-color: $primary-light;
+        }
       }
     }
   }
   &_button{
+    padding: 0;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
   }

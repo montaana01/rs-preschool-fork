@@ -8,7 +8,8 @@
   &_textarea{
     width: 430px;
     display: grid;
+    justify-content: start;
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 25px;
   }
 }

@@ -133,13 +133,6 @@ p.s {
   color: #b2b2b2;
 }
 
-.l {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #545454;
-}
-
 button {
   border-radius: 100px;
   padding: 15px 45px;
@@ -152,6 +145,7 @@ button {
   color: #292929;
   background-color: #f1cdb3;
   cursor: pointer;
+  border: 0;
   transition: 0.5s all;
 }
 button:hover {
@@ -196,13 +190,37 @@ button:hover {
 .link:hover {
   color: #fafafa;
 }
+.link a {
+  text-decoration: none;
+  color: #cdcdcd;
+  transition: 0.5s all;
+}
+.link a:hover {
+  color: #fafafa;
+}
 .link_black {
   color: #545454;
   cursor: pointer;
   transition: 0.5s all;
 }
+.link_black a {
+  text-decoration: none;
+  color: #545454;
+  transition: 0.5s all;
+}
+.link_black a:hover {
+  color: #292929;
+}
 .link_black:hover {
   color: #292929;
+}
+
+.active {
+  color: #fafafa;
+}
+
+.link_black.active {
+  color: #545454;
 }
 
 .active::after {
@@ -212,6 +230,10 @@ button:hover {
   height: 3px;
   background-color: #f1cdb3;
   width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -250,6 +272,11 @@ header {
 }
 
 .nav_item {
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
   padding-right: 35px;
 }
 
@@ -292,17 +319,33 @@ header {
   width: 270px;
   height: 435px;
   background-color: #fafafa;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.pets_wrapper-item img {
+  display: block;
+  line-height: 0;
 }
 .pets_wrapper-item h4 {
   margin-top: 30px;
   text-align: center;
 }
-.pets_wrapper-item button {
-  margin: 30px 35px;
+.pets_wrapper-item > button {
+  display: block;
+  width: 187px;
+  padding: 15px 42px;
+  margin: 30px auto;
+}
+.pets_wrapper-item:hover {
+  background: #fff;
+}
+.pets_wrapper-item:hover > button {
+  background-color: #fddcc4;
 }
 .pets_button {
+  padding: 0;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
 }

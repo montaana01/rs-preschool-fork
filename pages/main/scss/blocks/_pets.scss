@@ -2,7 +2,12 @@
   padding: 80px 0 100px 0;
   width: 100%;
   background: $light-l;
-
+  a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 52px;
+  }
   &_header {
     text-align: center;
     width: 400px;
@@ -57,13 +62,21 @@
       height: 435px;
       background-color: $light-s;
 
+      img{
+        display: block;
+        line-height: 0;
+      }
+
       h4 {
         margin-top: 30px;
         text-align: center;
       }
 
       &>button {
-        margin: 30px 35px;
+        display: block;
+        width: 187px;
+        padding: 15px 42px;
+        margin: 30px auto;
       }
       cursor: pointer;
       transition: 0.5s all;
@@ -79,6 +92,7 @@
   &_button{
     display: block;
     margin: 60px auto 0 auto;
+    padding: 0;
     width: 261px;
     height: 52px;
   }

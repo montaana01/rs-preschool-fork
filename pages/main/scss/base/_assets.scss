@@ -43,7 +43,7 @@ p{
   }
 }
 
-button{
+button, .button{
   border-radius: 100px;
   padding: 15px 45px;
   width: 207px;
@@ -95,18 +95,39 @@ button{
   &:hover{
     color:$light-s;
   }
+  a{
+    text-decoration: none;
+    color: $dark-s;
+    transition: 0.5s all;
+    &:hover{
+      color:$light-s;
+    }
+  }
   &_black{
     color: $dark-l;
     cursor: pointer;
     transition: 0.5s all;
+    a {
+      text-decoration: none;
+      color: $dark-l;
+      transition: 0.5s all;
+    }
+    a:hover {
+      color: $dark-3xl;
+    }
     &:hover{
       color:$dark-3xl;
     }
   }
+
 }
 .active{
   color:$light-s;
 }
+.link_black.active{
+  color: $dark-l;
+}
+
 .active::after{
   content: "";
   display: block;

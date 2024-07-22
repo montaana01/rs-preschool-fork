@@ -6,6 +6,10 @@
     column-gap: 30px;
     align-items: center;
     &-item{
+      a{
+        color: $dark-l;
+
+      }
       h5{
         margin-top: 20px;
       }

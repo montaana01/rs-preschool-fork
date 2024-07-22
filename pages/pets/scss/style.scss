@@ -2,7 +2,9 @@
 @import 'base/_variables.scss';
 @import 'base/_assets.scss';
 
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   font-family: "Georgia", sans-serif;

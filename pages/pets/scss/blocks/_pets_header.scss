@@ -26,6 +26,11 @@ header{
   }
 }
 .nav_item {
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
   padding-right: 35px;
 }
 .nav_item:last-child {
