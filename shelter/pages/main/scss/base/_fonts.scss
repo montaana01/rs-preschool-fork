@@ -1,0 +1,129 @@
+//Georgia Font
+@font-face {
+  font-family: 'Georgia Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Regular'), url('/shelter/assets/fonts/georgia.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Italic'), url('/shelter/assets/fonts/georgiai.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Bold'), url('/shelter/assets/fonts/georgiab.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Bold Italic'), url('/shelter/assets/fonts/georgiaz.woff') format('woff');
+}
+
+//Arial Font
+
+@font-face {
+  font-family: 'Arial';
+  src: url('/shelter/assets/fonts/Arial-ItalicMT.eot');
+  src: local('Arial Italic'), local('Arial-ItalicMT'),
+  url('/shelter/assets/fonts/Arial-ItalicMT.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/Arial-ItalicMT.woff') format('woff'),
+  url('/shelter/assets/fonts/Arial-ItalicMT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('/shelter/assets/fonts/ArialNarrow-Bold.eot');
+  src: local('Arial Narrow Bold'), local('ArialNarrow-Bold'),
+  url('/shelter/assets/fonts/ArialNarrow-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/ArialNarrow-Bold.woff') format('woff'),
+  url('/shelter/assets/fonts/ArialNarrow-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('/shelter/assets/fonts/Arial-BoldItalicMT.eot');
+  src: local('Arial Bold Italic'), local('Arial-BoldItalicMT'),
+  url('/shelter/assets/fonts/Arial-BoldItalicMT.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/Arial-BoldItalicMT.woff') format('woff'),
+  url('/shelter/assets/fonts/Arial-BoldItalicMT.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('/shelter/assets/fonts/ArialNarrow.eot');
+  src: local('Arial Narrow'), local('ArialNarrow'),
+  url('/shelter/assets/fonts/ArialNarrow.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/ArialNarrow.woff') format('woff'),
+  url('/shelter/assets/fonts/ArialNarrow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('/shelter/assets/fonts/ArialNarrow-Italic.eot');
+  src: local('Arial Narrow Italic'), local('ArialNarrow-Italic'),
+  url('/shelter/assets/fonts/ArialNarrow-Italic.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/ArialNarrow-Italic.woff') format('woff'),
+  url('/shelter/assets/fonts/ArialNarrow-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('/shelter/assets/fonts/ArialMT.eot');
+  src: local('Arial'), local('ArialMT'),
+  url('/shelter/assets/fonts/ArialMT.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/ArialMT.woff') format('woff'),
+  url('/shelter/assets/fonts/ArialMT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('/shelter/assets/fonts/Arial-BoldMT.eot');
+  src: local('Arial Bold'), local('Arial-BoldMT'),
+  url('/shelter/assets/fonts/Arial-BoldMT.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/Arial-BoldMT.woff') format('woff'),
+  url('/shelter/assets/fonts/Arial-BoldMT.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('/shelter/assets/fonts/Arial-Black.eot');
+  src: local('Arial Black'), local('Arial-Black'),
+  url('/shelter/assets/fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/Arial-Black.woff') format('woff'),
+  url('/shelter/assets/fonts/Arial-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('/shelter/assets/fonts/ArialNarrow-BoldItalic.eot');
+  src: local('Arial Narrow Bold Italic'), local('ArialNarrow-BoldItalic'),
+  url('/shelter/assets/fonts/ArialNarrow-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('/shelter/assets/fonts/ArialNarrow-BoldItalic.woff') format('woff'),
+  url('/shelter/assets/fonts/ArialNarrow-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
