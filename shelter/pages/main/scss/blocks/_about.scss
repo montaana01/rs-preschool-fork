@@ -4,8 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    img{
+      line-height: 0;
+      font-size: 0;
+    }
+  }
+  &_picture{
+    height: 408px;
   }
   &_textarea{
+    height: 380px;
     width: 430px;
     display: grid;
     justify-content: start;

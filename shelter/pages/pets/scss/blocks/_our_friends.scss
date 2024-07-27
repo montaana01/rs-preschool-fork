@@ -1,4 +1,4 @@
-.pets{
+.our_friends{
   padding: 80px 0 100px 0;
   width: 100%;
   background: $light-l;
@@ -77,24 +77,19 @@
     }
     &>.prev, &>.start{
       color: $dark-s;
-      cursor: pointer;
-    }
-    &>.prev:hover, &>.start:hover{
-      color: $dark-3xl;
     }
     &>.number{
       background: $primary;
       border: 2px solid $primary;
-    }
-    &>.number:hover{
-      scale: 1.02;
+      transition: 0.5s all;
     }
     &>.next, &>.end{
       border: 2px solid $primary;
       color: $dark-3xl;
+      transition: 0.5s all;
     }
     &>.next:hover, &>.end:hover{
-      color: $dark-s;
+      background-color: $primary;
     }
 
   }

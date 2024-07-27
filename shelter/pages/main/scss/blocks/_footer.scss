@@ -1,5 +1,5 @@
 footer{
-  background: url('/assets/images/bg/footer-background.png') center center / cover no-repeat;
+  background: url('./../../assets/images/bg/footer-background.png') center center / cover no-repeat;
   height: 350px;
 }
 .footer{
@@ -43,6 +43,9 @@ footer{
   }
   &_contacts{
     padding-top: 16px;
+    h3{
+      width: 279px;
+    }
     .footer_wrapper-item{
       height: 32px;
     }
