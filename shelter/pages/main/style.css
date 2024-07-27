@@ -332,7 +332,15 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.about_wrapper img {
+  line-height: 0;
+  font-size: 0;
+}
+.about_picture {
+  height: 408px;
+}
 .about_textarea {
+  height: 380px;
   width: 430px;
   display: grid;
   justify-content: start;
@@ -548,6 +556,9 @@ footer {
 }
 .footer_contacts {
   padding-top: 16px;
+}
+.footer_contacts h3 {
+  width: 279px;
 }
 .footer_contacts .footer_wrapper-item {
   height: 32px;

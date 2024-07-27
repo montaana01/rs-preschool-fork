@@ -258,6 +258,12 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.header_logo a h1 {
+  color: #545454;
+}
+.header_logo a div {
+  color: #292929;
+}
 .header_title {
   line-height: 35px;
 }
@@ -269,6 +275,9 @@ header {
   display: flex;
   padding: 0;
   list-style-type: none;
+}
+.header_navigation > ul .active {
+  cursor: auto;
 }
 
 .nav_item {
@@ -284,25 +293,25 @@ header {
   padding-right: 0;
 }
 
-.pets_header_title {
+.our_friends_header_title {
   color: #545454;
 }
 
-.pets_header_subtitle {
+.our_friends_header_subtitle {
   color: #292929;
 }
 
-.pets {
+.our_friends {
   padding: 80px 0 100px 0;
   width: 100%;
   background: #f6f6f6;
 }
-.pets_header {
+.our_friends_header {
   text-align: center;
   width: 400px;
   margin: 0 auto;
 }
-.pets_wrapper {
+.our_friends_wrapper {
   margin-top: 45px;
   padding: 15px 0;
   display: grid;
@@ -314,7 +323,7 @@ header {
   column-gap: 40px;
   row-gap: 30px;
 }
-.pets_wrapper-item {
+.our_friends_wrapper-item {
   border-radius: 9px;
   width: 270px;
   height: 435px;
@@ -322,34 +331,34 @@ header {
   cursor: pointer;
   transition: 0.5s all;
 }
-.pets_wrapper-item img {
+.our_friends_wrapper-item img {
   display: block;
   line-height: 0;
 }
-.pets_wrapper-item h4 {
+.our_friends_wrapper-item h4 {
   margin-top: 30px;
   text-align: center;
 }
-.pets_wrapper-item > button {
+.our_friends_wrapper-item > button {
   display: block;
   width: 187px;
   padding: 15px 42px;
   margin: 30px auto;
 }
-.pets_wrapper-item:hover {
+.our_friends_wrapper-item:hover {
   background: #fff;
 }
-.pets_wrapper-item:hover > button {
+.our_friends_wrapper-item:hover > button {
   background-color: #fddcc4;
 }
-.pets_button {
+.our_friends_button {
   padding: 0;
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
-.pets_carousel {
+.our_friends_carousel {
   margin: 0 auto;
   padding-top: 45px;
   display: flex;
@@ -357,7 +366,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.pets_carousel-item {
+.our_friends_carousel-item {
   position: relative;
   display: block;
   border: 2px solid #cdcdcd;
@@ -365,32 +374,27 @@ header {
   width: 48px;
   height: 48px;
 }
-.pets_carousel-item span {
+.our_friends_carousel-item span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.pets_carousel > .prev, .pets_carousel > .start {
+.our_friends_carousel > .prev, .our_friends_carousel > .start {
   color: #cdcdcd;
-  cursor: pointer;
 }
-.pets_carousel > .prev:hover, .pets_carousel > .start:hover {
-  color: #292929;
-}
-.pets_carousel > .number {
+.our_friends_carousel > .number {
   background: #f1cdb3;
   border: 2px solid #f1cdb3;
+  transition: 0.5s all;
 }
-.pets_carousel > .number:hover {
-  scale: 1.02;
-}
-.pets_carousel > .next, .pets_carousel > .end {
+.our_friends_carousel > .next, .our_friends_carousel > .end {
   border: 2px solid #f1cdb3;
   color: #292929;
+  transition: 0.5s all;
 }
-.pets_carousel > .next:hover, .pets_carousel > .end:hover {
-  color: #cdcdcd;
+.our_friends_carousel > .next:hover, .our_friends_carousel > .end:hover {
+  background-color: #f1cdb3;
 }
 
 footer {
@@ -441,6 +445,9 @@ footer {
 }
 .footer_contacts .footer_wrapper-item {
   height: 32px;
+}
+.footer_contacts h3 {
+  width: 279px;
 }
 .footer_address {
   padding-top: 16px;
