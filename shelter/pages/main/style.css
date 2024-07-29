@@ -316,12 +316,15 @@ header {
   width: 698px;
   height: 728px;
 }
-.not_only_wrapper-item button {
+.not_only_wrapper-item a {
+  padding: 0;
+  text-align: center;
+  line-height: 52px;
+  display: block;
   margin-top: 42px;
 }
 .not_only_button {
   font-weight: 400;
-  font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.06em;
 }

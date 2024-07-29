@@ -86,6 +86,7 @@
     &>.next, &>.end{
       border: 2px solid $primary;
       color: $dark-3xl;
+      cursor: pointer;
       transition: 0.5s all;
     }
     &>.next:hover, &>.end:hover{

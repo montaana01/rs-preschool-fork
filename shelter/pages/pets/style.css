@@ -391,6 +391,7 @@ header {
 .our_friends_carousel > .next, .our_friends_carousel > .end {
   border: 2px solid #f1cdb3;
   color: #292929;
+  cursor: pointer;
   transition: 0.5s all;
 }
 .our_friends_carousel > .next:hover, .our_friends_carousel > .end:hover {
