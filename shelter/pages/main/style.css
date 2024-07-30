@@ -191,6 +191,7 @@ button:hover, .button:hover {
   color: #fafafa;
 }
 .link a {
+  font-family: "Arial", sans-serif;
   text-decoration: none;
   color: #cdcdcd;
   transition: 0.5s all;
