@@ -204,6 +204,7 @@ button:hover {
   transition: 0.5s all;
 }
 .link_black a {
+  font-family: "Arial", sans-serif;
   text-decoration: none;
   color: #545454;
   transition: 0.5s all;
