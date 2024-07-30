@@ -430,8 +430,20 @@ footer {
   align-items: center;
   column-gap: 20px;
 }
+.footer_wrapper-item h4 {
+  transition: 0.4s all;
+  color: #f1cdb3;
+}
 .footer_wrapper-item svg {
+  transition: 0.4s all;
   flex-shrink: 0;
+}
+.footer_wrapper-item:hover h4 {
+  color: #fddcc4;
+}
+.footer_wrapper-item:hover svg {
+  scale: 1.05;
+  fill: #fddcc4;
 }
 .footer_wrapper-item .problem {
   width: 255px;

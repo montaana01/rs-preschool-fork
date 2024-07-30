@@ -25,10 +25,22 @@ footer{
       display: flex;
       align-items: center;
       column-gap: 20px;
-      a{
+      h4{
+        transition: 0.4s all;
+        color: $primary;
       }
       svg{
+        transition: 0.4s all;
         flex-shrink: 0;
+      }
+      &:hover{
+        h4{
+          color: $primary-light;
+        }
+        svg{
+          scale: 1.05;
+          fill: $primary-light;
+        }
       }
       .problem{
         width: 255px;
