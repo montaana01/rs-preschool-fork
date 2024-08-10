@@ -3,7 +3,6 @@
   width: 100%;
   background: url(./../../assets/images/bg/start_bg.png) center (center / cover) no-repeat;
   &_wrapper{
-    height: 728px;
     display: flex;
     justify-content: space-between;
     &-item{
@@ -17,7 +16,8 @@
         width: 460px;
         color: $dark-s;
       }
-      &img{
+      img{
+        float: right;
         width: 698px;
         height: 728px;
       }

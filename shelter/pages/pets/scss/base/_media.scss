@@ -1,35 +1,8 @@
 @media (max-width: 1280px) {
-  .not_only{
-    &_wrapper {
-      flex-wrap: wrap;
-    }
-  }
+
 }
 @media (max-width: 1240px) {
-  .not_only{
-    padding-top: 150px;
-    &_wrapper {
-      flex-direction: column;
-      justify-content: unset;
-      row-gap: 100px;
-      &-item{
-        h2{
-          margin-top: unset;
-        }
-        &:first-child{
-          margin: 0 auto;
-        }
-        img{
-          width: unset;
-          height: unset;
-          max-width: 569px;
-        }
-      }
-    }
-    &_button{
-      margin: 0 auto;
-    }
-  }
+
 }
 @media (max-width: 768px) {
   .container {

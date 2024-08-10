@@ -239,13 +239,23 @@ html {
 
 * {
   margin: 0;
+  box-sizing: border-box;
   font-family: "Georgia", sans-serif;
+}
+* a {
+  text-decoration: none;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
 }
 
 .container {
-  width: 1200px;
-  padding: 0 40px;
   margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
 }
 
 header {
@@ -468,4 +478,16 @@ footer {
 }
 .footer_image {
   font-size: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
 }

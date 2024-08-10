@@ -239,19 +239,27 @@ html {
 
 * {
   margin: 0;
+  box-sizing: border-box;
   font-family: "Georgia", sans-serif;
 }
 * a {
   text-decoration: none;
 }
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
 
 .container {
-  width: 1200px;
-  padding: 0 40px;
   margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
 }
 
 header {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 50%;
@@ -300,7 +308,6 @@ header {
   background: url(./../../assets/images/bg/start_bg.png) center center/cover no-repeat;
 }
 .not_only_wrapper {
-  height: 728px;
   display: flex;
   justify-content: space-between;
 }
@@ -314,7 +321,8 @@ header {
   width: 460px;
   color: #cdcdcd;
 }
-.not_only_wrapper-itemimg {
+.not_only_wrapper-item img {
+  float: right;
   width: 698px;
   height: 728px;
 }
@@ -592,145 +600,37 @@ footer {
 }
 
 @media (max-width: 1280px) {
-  header > .container {
-    width: calc(100% - 60px);
-    padding: 0;
-    margin: 0;
+  .not_only_wrapper {
+    flex-wrap: wrap;
   }
-  header {
-    width: calc(100% - 60px);
-  }
-  .header_wrapper {
-    padding: 0;
-  }
-  .container {
-    width: calc(100% - 60px);
-    padding: 0;
-    margin: 0 30px;
-  }
+}
+@media (max-width: 1240px) {
   .not_only {
     padding-top: 150px;
-    width: 100%;
   }
   .not_only_wrapper {
-    height: 0;
-    min-height: 1015px;
     flex-direction: column;
+    justify-content: unset;
     row-gap: 100px;
   }
-  .not_only_wrapper-item {
-    max-height: 593px;
-  }
   .not_only_wrapper-item h2 {
-    margin-top: 0;
+    margin-top: unset;
   }
-  .not_only_wrapper-item a {
-    margin: 42px auto 0 auto;
+  .not_only_wrapper-item:first-child {
+    margin: 0 auto;
   }
   .not_only_wrapper-item img {
-    float: right;
-    height: 100%;
+    width: unset;
+    height: unset;
+    max-width: 569px;
   }
-  .about_wrapper {
-    padding: 80px 0 100px 0;
-    flex-direction: column;
-    row-gap: 80px;
-  }
-  .about_picture {
-    height: 408px;
-  }
-  .about_textarea {
-    height: 380px;
-    width: 430px;
-    display: grid;
-    justify-content: start;
-    grid-template-columns: 1fr;
-    row-gap: 25px;
-  }
-  .pets_wrapper {
-    margin: 0 64px;
-    column-gap: 40px;
-  }
-  .donation_wrapper {
-    padding: 80px 0 100px 0;
-    flex-direction: column-reverse;
-    row-gap: 60px;
-    align-content: center;
-  }
-  .footer_wrapper {
-    flex-wrap: wrap;
-    column-gap: 60px;
+  .not_only_button {
+    margin: 0 auto;
   }
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 708px;
-    min-width: 408px;
     padding: 0 30px;
-    margin: 0 auto;
-  }
-  .header_wrapper {
-    padding: 0 30px;
-  }
-  .not_only {
-    padding-top: 150px;
-    width: 100%;
-  }
-  .not_only_wrapper {
-    height: 0;
-    min-height: 1015px;
-    flex-direction: column;
-    row-gap: 100px;
-  }
-  .not_only_wrapper-item {
-    max-height: 593px;
-  }
-  .not_only_wrapper-item h2 {
-    margin-top: 0;
-  }
-  .not_only_wrapper-item a {
-    margin: 42px auto 0 auto;
-  }
-  .not_only_wrapper-item img {
-    padding-left: 70px;
-    height: 100%;
-  }
-  .about_wrapper {
-    padding: 80px 0 100px 0;
-    flex-direction: column;
-    row-gap: 80px;
-  }
-  .about_picture {
-    height: 408px;
-  }
-  .about_textarea {
-    height: 380px;
-    width: 430px;
-    display: grid;
-    justify-content: start;
-    grid-template-columns: 1fr;
-    row-gap: 25px;
-  }
-  .pets_wrapper {
-    margin: 0 64px;
-    column-gap: 40px;
-  }
-  .donation_wrapper {
-    padding: 80px 0 100px 0;
-    flex-direction: column-reverse;
-    row-gap: 60px;
-    align-content: center;
-  }
-  .footer_wrapper {
-    flex-wrap: wrap;
-    column-gap: 60px;
-  }
-}
-@media (max-width: 480px) {
-  .container {
-    width: 300px;
-    padding: 0 10px;
-    margin: 0 auto;
   }
 }
 @media (max-width: 320px) {
