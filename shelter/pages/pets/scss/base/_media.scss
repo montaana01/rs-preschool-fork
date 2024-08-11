@@ -58,13 +58,105 @@
     }
   }
 }
-@media (max-width: 480px){
+@media (max-width: 640px){
   .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .not_only {
+    padding-top: 150px;
+    &_wrapper {
+      &-item {
+        h2 {
+          font-size: 25px;
+          text-align: center;
+        }
+        p{
+          width: 300px;
+        }
+        img{
+          width: 260px;
+          height: 271px;
+        }
+      }
+    }
+  }
+  .about{
+    &_wrapper {
+      padding: 42px 0;
+      row-gap: 42px;
+    }
+    &_textarea{
+      height: unset;
+      width: 300px;
+      h3{
+        text-align: center;
+      }
+      p{
+        text-align: justify;
+      }
+    }
+  }
+
+  .help{
+    padding: 42px 0;
+    &_wrapper{
+      margin: 60px auto 0 auto;
+      width: 290px;
+      column-gap: 30px;
+      justify-content: flex-start;
+      &-item {
+        width: 130px;
+        text-align: center;
+      }
+    }
+  }
+
+  .donation{
+    padding: 42px 0;
+    &_wrapper {
+      &-item {
+        img {
+          width: 260px;
+          height: 135px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 320px){
   .container {
     width: 100%;
     padding: 0 10px;
+  }
+  .header{
+    &_wrapper{
+      padding: 10px 0;
+    }
+  }
+  .footer{
+    &_wrapper{
+      row-gap: 22px;
+      h3{
+        text-align: center;
+        font-size: 25px;
+      }
+      a{
+        margin: 0 auto;
+      }
+      &-item{
+        justify-content: center;
+      }
+    }
+    &_address{
+      h3{
+        width: 270px;
+        margin: 0 auto;
+      }
+      .footer_wrapper-item{
+        margin-top: 40px;
+        justify-content: left;
+      }
+    }
   }
 }
