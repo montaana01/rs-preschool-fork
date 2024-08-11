@@ -1,6 +1,5 @@
 footer{
   background: url('./../../assets/images/bg/footer-background.png') center center / cover no-repeat;
-  height: 350px;
 }
 .footer{
   padding-top: 40px;
@@ -18,8 +17,8 @@ footer{
   }
   &_wrapper{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    column-gap: 160px;
     &-item{
       margin-top: 40px;
       display: flex;
@@ -64,6 +63,7 @@ footer{
   }
   &_address{
     padding-top: 16px;
+    width: 302px;
   }
   &_image{
     font-size: 0;

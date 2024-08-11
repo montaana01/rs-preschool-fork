@@ -28,6 +28,10 @@ header{
     padding: 0;
     list-style-type: none;
   }
+
+  &_hamburger{
+    display: none;
+  }
 }
 .nav_item {
   display: block;
