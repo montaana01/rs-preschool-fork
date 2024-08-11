@@ -1,20 +1,18 @@
 .donation{
   background: $light-l;
   &_wrapper{
-    padding: 80px 143px 100px 142px;
+    padding: 80px 0 100px 0;
     display: flex;
     column-gap: 30px;
     align-items: center;
+    justify-content: center;
     &-item {
       a {
         color: $dark-l;
-
       }
-
       h5 {
         margin-top: 20px;
       }
-
       &_bank {
         margin-top: 20px;
         display: inline-flex;

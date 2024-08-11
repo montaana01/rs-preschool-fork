@@ -36,6 +36,10 @@ header{
       cursor: auto;
     }
   }
+
+  &_hamburger{
+    display: none;
+  }
 }
 .nav_item {
   display: block;

@@ -1,0 +1,264 @@
+@media (max-width: 1280px) {
+  .not_only{
+    &_wrapper {
+      flex-wrap: wrap;
+    }
+  }
+  .pets{
+    &_wrapper {
+      margin: 60px auto 0 auto;
+      width: 580px;
+      column-gap: 40px;
+    }
+  }
+}
+@media (max-width: 1240px) {
+  .not_only{
+    padding-top: 150px;
+    &_wrapper {
+      flex-direction: column;
+      justify-content: unset;
+      row-gap: 100px;
+      &-item{
+        h2{
+          margin-top: unset;
+        }
+        &:first-child{
+          margin: 0 auto;
+        }
+        img{
+          width: unset;
+          height: unset;
+          max-width: 569px;
+        }
+      }
+    }
+    &_button{
+      margin: 0 auto;
+    }
+  }
+  .donation{
+    &_wrapper {
+      padding: 77px 0 96px 0;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-items: center;
+      row-gap: 60px;
+    }
+  }
+  .footer {
+    padding-top: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 30px;
+  }
+  .footer {
+    &_wrapper {
+      justify-content: center;
+      column-gap: 60px;
+      row-gap: 65px;
+    }
+  }
+  .about {
+    &_wrapper {
+      flex-wrap: wrap-reverse;
+      row-gap: 80px;
+    }
+  }
+  .pets{
+    &_arrow {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .help {
+    &_wrapper {
+      column-gap: 60px;
+
+      &-item {
+        width: 170px;
+      }
+    }
+  }
+
+}
+@media (max-width: 768px) {
+  .not_only{
+//    padding-top: 150px;
+//    width: 100%;
+//    &_wrapper {
+//      flex-wrap: wrap;
+//      height: 0;
+//      min-height: 1015px;
+//      flex-direction: column;
+//      row-gap: 100px;
+//      &-item{
+//        max-height: 593px;
+//        h2 {
+//          margin-top: 0;
+//        }
+//        a{
+//          margin: 42px auto 0 auto;
+//        }
+//        img{
+//          float: left;
+//          height: 100%;
+//        }
+//      }
+//    }
+  }
+//  .about{
+//    &_wrapper{
+//      padding: 80px 0 100px 0;
+//      flex-direction: column;
+//      row-gap: 80px;
+//    }
+//    &_picture{
+//      height: 408px;
+//    }
+//    &_textarea{
+//      height: 380px;
+//      width: 430px;
+//      display: grid;
+//      justify-content: start;
+//      grid-template-columns: 1fr;
+//      row-gap: 25px;
+//    }
+//  }
+//  .pets{
+//    &_wrapper{
+//      margin: 0 64px;
+//      column-gap: 40px;
+//    }
+//  }
+//  .donation{
+//    &_wrapper{
+//      padding: 80px 0 100px 0;
+//      flex-direction: column-reverse;
+//      row-gap: 60px;
+//      align-content: center
+//    }
+//  }
+//  .footer {
+//    &_wrapper {
+//      flex-wrap: wrap;
+//      column-gap: 60px;
+//    }
+//  }
+}
+@media (max-width: 744px) {
+  .pets{
+    padding: 42px 0 ;
+    &_header{
+      font-size: 25px;
+      width: unset;
+    }
+    &_carousel{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &_arrows {
+      padding-top: 20px;
+      position: relative;
+      top: unset;
+      transform: unset;
+      justify-content: center;
+      column-gap: 100px;
+    }
+    &_wrapper{
+      margin-top: 42px;
+      width: 270px;
+    }
+  }
+}
+@media (max-width: 730px) {
+  .header{
+    &_navigation{
+      display: none;
+    }
+    &_hamburger{
+      cursor: pointer;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span{
+        width: 30px;
+        height: 2px;
+        background: $primary;
+      }
+    }
+  }
+}
+@media (max-width: 640px){
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .not_only {
+    padding-top: 150px;
+    &_wrapper {
+      &-item {
+        h2 {
+          font-size: 25px;
+          text-align: center;
+        }
+        p{
+          width: 300px;
+        }
+        img{
+          width: 260px;
+          height: 271px;
+        }
+      }
+    }
+  }
+  .about{
+    &_wrapper {
+      padding: 42px 0;
+      row-gap: 42px;
+    }
+    &_textarea{
+      height: unset;
+      width: 300px;
+      h3{
+        text-align: center;
+      }
+      p{
+        text-align: justify;
+      }
+    }
+  }
+
+  .help{
+    padding: 42px 0;
+    &_wrapper{
+      margin: 60px auto 0 auto;
+      width: 290px;
+      column-gap: 30px;
+      justify-content: flex-start;
+      &-item {
+        width: 130px;
+        text-align: center;
+      }
+    }
+  }
+
+  .donation{
+    padding: 42px 0;
+    &_wrapper {
+      &-item {
+        img {
+          width: 260px;
+          height: 135px;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: 320px){
+
+}
