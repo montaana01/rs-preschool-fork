@@ -7,16 +7,23 @@ html {
 }
 * {
   margin: 0;
+  box-sizing: border-box;
   font-family: "Georgia", sans-serif;
   a{
     text-decoration: none;
   }
+  &::before{
+    box-sizing: border-box;
+  }
+  &::after{
+    box-sizing: border-box;
+  }
 }
 
 .container {
-  width: 1200px;
-  padding: 0 40px;
   margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
 }
 
 
@@ -28,4 +35,5 @@ html {
 @import 'blocks/_donation.scss';
 @import 'blocks/_footer.scss';
 
+@import 'base/_media.scss';
 
