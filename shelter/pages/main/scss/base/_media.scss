@@ -1,4 +1,4 @@
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .not_only{
     &_wrapper {
       flex-wrap: wrap;
@@ -66,14 +66,23 @@
       flex-wrap: wrap-reverse;
       row-gap: 80px;
     }
+    &_textarea{
+      padding: unset;
+    }
+
   }
   .pets{
+    &_wrapper {
+      margin: 58px auto 0 auto;
+      width: 580px;
+      column-gap: 40px;
+    }
     &_arrow {
       width: 50px;
       height: 50px;
     }
     &_button{
-      margin: 43px auto 0 auto;
+      margin: 60px auto 0 auto;
     }
   }
   .help {
@@ -108,6 +117,9 @@
     &_wrapper{
       margin-top: 42px;
       width: 270px;
+    }
+    a{
+      margin: 43px auto 0 auto;
     }
   }
 }
@@ -203,11 +215,15 @@
   .donation{
     padding: 43px 0 38px 0;
     &_wrapper {
+      padding: 0 42px;
       row-gap: 42px;
       &-item {
         img {
           width: 260px;
           height: 135px;
+        }
+        p{
+          width: unset;
         }
       }
     }
@@ -273,7 +289,6 @@
   }
   .donation{
     &_wrapper{
-      padding: 0 42px;
       &-item{
         h3{
           font-size: 25px;
@@ -303,7 +318,7 @@
   }
   .footer{
     &_wrapper{
-      row-gap: 22px;
+      row-gap: unset;
         h3{
           text-align: center;
           font-size: 25px;
@@ -316,6 +331,7 @@
       }
     }
     &_address{
+      margin-top: 22px;
       h3{
         width: 270px;
         margin: 0 auto;
@@ -323,6 +339,13 @@
       .footer_wrapper-item{
         margin-top: 40px;
         justify-content: left;
+      }
+    }
+    &_image{
+      margin-top: 40px;
+      width: 260px;
+      img{
+        width:100%;
       }
     }
   }
