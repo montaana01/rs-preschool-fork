@@ -535,7 +535,7 @@ footer {
   .header_hamburger span {
     width: 30px;
     height: 2px;
-    background: #f1cdb3;
+    background: #000000;
   }
 }
 @media (max-width: 640px) {
