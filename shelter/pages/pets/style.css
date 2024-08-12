@@ -326,6 +326,7 @@ header {
   margin: 0 auto;
 }
 .our_friends_wrapper {
+  height: 932px;
   margin-top: 45px;
   padding: 15px 0;
   display: grid;
@@ -505,15 +506,19 @@ footer {
     padding: 0 30px;
   }
   .our_friends {
-    padding: 80px 0 70px 0;
+    padding: 80px 0;
   }
   .our_friends_wrapper {
+    height: 1375px;
     margin-top: 30px;
     padding: 0;
     justify-content: center;
   }
   .our_friends_carousel {
     padding-top: 30px;
+  }
+  .footer {
+    padding-top: 13px;
   }
 }
 @media (max-width: 730px) {
@@ -538,53 +543,19 @@ footer {
     width: 100%;
     padding: 0 10px;
   }
-  .not_only {
-    padding-top: 150px;
+  .our_friends {
+    padding: 42px 0;
   }
-  .not_only_wrapper-item h2 {
+  .our_friends_header {
     font-size: 25px;
-    text-align: center;
+    width: unset;
   }
-  .not_only_wrapper-item p {
+  .our_friends_wrapper {
+    margin-top: 41px;
+  }
+  .our_friends_carousel {
+    padding-top: 35px;
     width: 300px;
-  }
-  .not_only_wrapper-item img {
-    width: 260px;
-    height: 271px;
-  }
-  .about_wrapper {
-    padding: 42px 0;
-    row-gap: 42px;
-  }
-  .about_textarea {
-    height: unset;
-    width: 300px;
-  }
-  .about_textarea h3 {
-    text-align: center;
-  }
-  .about_textarea p {
-    text-align: justify;
-  }
-  .help {
-    padding: 42px 0;
-  }
-  .help_wrapper {
-    margin: 60px auto 0 auto;
-    width: 290px;
-    column-gap: 30px;
-    justify-content: flex-start;
-  }
-  .help_wrapper-item {
-    width: 130px;
-    text-align: center;
-  }
-  .donation {
-    padding: 42px 0;
-  }
-  .donation_wrapper-item img {
-    width: 260px;
-    height: 135px;
   }
 }
 @media (max-width: 320px) {
@@ -593,10 +564,10 @@ footer {
     padding: 0 10px;
   }
   .header_wrapper {
-    padding: 10px 0;
+    padding: 30px 10px;
   }
   .footer_wrapper {
-    row-gap: 22px;
+    row-gap: unset;
   }
   .footer_wrapper h3 {
     text-align: center;
@@ -608,6 +579,9 @@ footer {
   .footer_wrapper-item {
     justify-content: center;
   }
+  .footer_address {
+    margin-top: 22px;
+  }
   .footer_address h3 {
     width: 270px;
     margin: 0 auto;
@@ -615,5 +589,12 @@ footer {
   .footer_address .footer_wrapper-item {
     margin-top: 40px;
     justify-content: left;
+  }
+  .footer_image {
+    margin-top: 40px;
+    width: 260px;
+  }
+  .footer_image img {
+    width: 100%;
   }
 }
