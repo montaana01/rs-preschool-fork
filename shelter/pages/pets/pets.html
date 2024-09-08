@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
+<header id="pets_overflow" class="overflow">
     <div class="container">
         <div class="pets_header_wrapper header_wrapper">
             <div class="pets_header_logo header_logo">
@@ -24,15 +24,18 @@
                     <div class="pets_header_subtitle header_subtitle subtitle">Shelter for pets in Boston</div>
                 </a>
             </div>
-            <nav class="pets_header_navigation header_navigation">
-                <ul>
-                    <li class="nav_item link_black"><a href="../main/index.html">About the shelter</a></li>
-                    <li class="nav_item link_black active">Our pets</li>
-                    <li class="nav_item link_black"><a href="../main/index.html#help">Help the shelter</a></li>
-                    <li class="nav_item link_black"><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="header_hamburger">
+            <div class="header_container" id="pets_container">
+                <div class="header_overlay" id="pets_overlay"></div>
+                <nav class="pets_header_navigation header_navigation" id="header_navigation">
+                    <ul>
+                        <li class="nav_item link_black"><a href="../main/index.html">About the shelter</a></li>
+                        <li class="nav_item link_black active">Our pets</li>
+                        <li class="nav_item link_black"><a href="../main/index.html#help">Help the shelter</a></li>
+                        <li class="nav_item link_black"><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_hamburger" id="pets_hamburger">
                 <span></span>
                 <span></span>
                 <span></span>

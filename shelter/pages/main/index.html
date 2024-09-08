@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="overflow" class="overflow">
         <div class="container">
             <div class="header_wrapper">
                 <div class="header_logo">
@@ -24,15 +24,18 @@
                         <div class="header_subtitle subtitle">Shelter for pets in Boston</div>
                     </a>
                 </div>
-                <nav class="header_navigation">
-                    <ul>
-                        <li class="nav_item active">About the shelter</li>
-                        <li class="nav_item link"><a href="../pets/pets.html">Our pets</a></li>
-                        <li class="nav_item link"><a href="#help">Help the shelter</a></li>
-                        <li class="nav_item link"><a href="#contacts">Contacts</a></li>
-                    </ul>
-                </nav>
-                <div class="header_hamburger">
+                <div class="header_container" id="header_container">
+                    <div class="header_overlay" id="header_overlay"></div>
+                    <nav class="header_navigation" id="header_navigation">
+                        <ul>
+                            <li class="nav_item active">About the shelter</li>
+                            <li class="nav_item link"><a href="../pets/pets.html">Our pets</a></li>
+                            <li class="nav_item link"><a href="#help">Help the shelter</a></li>
+                            <li class="nav_item link"><a href="#contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header_hamburger" id="header_hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -89,13 +92,13 @@
                     are looking for a house
                 </h3>
                 <div class="pets_carousel">
-                    <div class="pets_arrows">
+                    <div class="pets_arrows" id="pets_arrow-left">
                         <div class="pets_arrow">
                             <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
                             </svg>
                         </div>
-                        <div class="pets_arrow">
+                        <div class="pets_arrow" id="pets_arrow-right">
                             <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
                             </svg>

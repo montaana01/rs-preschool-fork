@@ -1,59 +1,26 @@
-console.log('Технические требования:\n' +
-    '+ вёрстка валидная, семантическая, соответствующая макету\n' +
-    '+ приложение корректно отображается и работает в браузере Google Chrome последней версии\n' +
-    '+ запрещается использование CSS-фреймворков (bootstrap) –– ничего не использовалось\n' +
-    '+ запрещается использование JS-фреймворков (Angular, React, Vue и т.д.) –– ни одного фреймворка\n' +
-    '+ запрещается использование устаревших библиотек (JQuery и т.д.) –– ни одной библиотеки\n' +
-    '+ запрещается использование TypeScript. На stage#1 вы практикуетесь в использовании чистого JavaScript, изучение TS и его использование предстоит на stage#2 текущего курса.\n' +
-    '+ !допускается использование CSS-препроцессоров (Sass), normalize.css  –– используется SCSS\n' +
-    '+ не рекомендуется использовать сброс стилей при помощи reset.css –– не используется\n' +
-    '+ запрещено добавление вёрстки картинкой, когда делается скрин части макета и' +
-    ' вставляется в вёрстку. Для вёрстки используйте теги и символы, картинками можно ' +
-    'добавлять изображения и иконки, а не элементы вёрстки (кнопки, блоки, секции) –– ни одной картинки для замещения секции\n')
-console.log('\n');
-console.log('Требования к вёрстке\n' +
-    'Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +14\n' +
-    'блок <header>: +2\n' +
-    'блок Not only: +2\n' +
-    'блок About: +2\n' +
-    'блок Our Friends: +2\n' +
-    'блок Help: +2\n' +
-    'блок In addition: +2\n' +
-    'блок <footer>: +2\n' +
-    'Вёрстка страницы Main соответствует макету при ширине экрана 768px: +14\n' +
-    'блок <header>: +2\n' +
-    'блок Not only: +2\n' +
-    'блок About: +2\n' +
-    'блок Our Friends: +2\n' +
-    'блок Help: +2\n' +
-    'блок In addition: +2\n' +
-    'блок <footer>: +2\n' +
-    'Вёрстка страницы Main соответствует макету при ширине экрана 320px: +14\n' +
-    'блок <header>: +2\n' +
-    'блок Not only: +2\n' +
-    'блок About: +2\n' +
-    'блок Our Friends: +2\n' +
-    'блок Help: +2\n' +
-    'блок In addition: +2\n' +
-    'блок <footer>: +2'+
-    'Верстка обеих страниц валидная: для проверки валидности вёрстки используйте сервис https://validator.w3.org/ : +8\n');
+//hamburger menu
+const HAMBURGER = document.getElementById("header_hamburger");
+const HEADER_CONTAINER = document.getElementById('header_container');
+const OVERFLOW = document.getElementById('overflow');
+const OVERLAY = document.getElementById("header_overlay");
+const BODY = document.body;
 
-   console.log('\n');
-console.log('Перечень ссылочных связей\n' +
-    'На странице Main\n' +
-    'На страницу Pets ведут:\n' +
-    '+ элемент навигации Our Pets\n' +
-    '+ кнопка Get to know the rest в блоке Our Friends\n' +
-    'На блок Help текущей страницы (якорная ссылка) ведут:\n' +
-    '+ элемент навигации Help the shelter\n' +
-    'На блок Our Friends текущей страницы (якорная ссылка) ведут:\n' +
-    '+ кнопка Make a Friend в блоке Not only\n' +
-    'На футер текущей страницы (якорная ссылка) ведут:\n' +
-    '+ элемент навигации Contacts\n' +
-    'Пустая ссылка:\n' +
-    '+логотип\n' +
-    '+номер банковской карты в блоке In addition\n' +
-    'Другие варианты поведения:\n' +
-    '+ в футере при нажатии на email или его иконку должен открываться почтовый сервис\n' +
-    '+ в футере при нажатии на телефон или его иконку должен открываться набор номера\n' +
-    '+ в футере при нажатии на локацию должна открываться страница с google maps в отдельном окне или вкладке браузера с любой локацией на ваш выбор\n');
+HAMBURGER.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    HAMBURGER.classList.toggle("hamburger_active");
+    HEADER_CONTAINER.classList.toggle("header_container_active");
+    OVERLAY.classList.toggle("header_overlay_active");
+    OVERFLOW.classList.toggle("overflow_unset");
+    BODY.classList.toggle("fixed");
+}
+OVERLAY.addEventListener("click", toggleMenu);
+
+//write slider
+const ARROW_LEFT = document.querySelector("#pets_arrow-left");
+const ARROW_RIGHT = document.querySelector("#pets_arrow_right");
+//document.querySelectorAll('div#pets_arrow-left')
+ARROW_LEFT.addEventListener("click", () => {
+    console.log(document.querySelectorAll('div#pets_arrow-left'));
+    alert(ARROW_RIGHT);
+});
