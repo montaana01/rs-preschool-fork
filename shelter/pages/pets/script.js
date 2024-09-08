@@ -15,3 +15,21 @@ function toggleMenu() {
     BODY.classList.toggle("fixed");
 }
 OVERLAY.addEventListener("click", toggleMenu);
+
+//get data from json
+fetch('./../../assets/pets.json')
+    .then(response => response.json())
+    .then(data => {
+        const PETS = data;
+        //if we have pets in json we use functions to create pets cards
+        //here some functions
+    })
+    .catch(error => console.error('Error while getting data from JSON:',error));
+// get data from json end
+
+//how many cards we need show on page
+function getPetsCount(){
+    if (window.innerWidth < 768) return 1
+    if (window.innerWidth < 1280) return 2;
+    return 3;
+}

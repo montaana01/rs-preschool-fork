@@ -46,6 +46,7 @@
     }
   }
   &_wrapper {
+    position: relative;
     margin: 0 105px;
     margin-top: 60px;
     display: grid;
@@ -55,7 +56,7 @@
     grid-auto-flow: column;
     overflow: hidden;
     column-gap: 90px;
-
+    transition: trasform 0.5s ease-in-out;
     &-item {
       border-radius: 9px;
       width: 270px;
