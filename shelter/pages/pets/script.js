@@ -26,3 +26,10 @@ fetch('./../../assets/pets.json')
     })
     .catch(error => console.error('Error while getting data from JSON:',error));
 // get data from json end
+
+//how many cards we need show on page
+function getPetsCount(){
+    if (window.innerWidth < 768) return 1
+    if (window.innerWidth < 1280) return 2;
+    return 3;
+}

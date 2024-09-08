@@ -28,11 +28,16 @@ fetch('./../../assets/pets.json')
     .catch(error => console.error('Error while getting data from JSON:',error));
 // get data from json end
 
+//how many cards we need show on page
+function getPetsCount(){
+    if (window.innerWidth < 768) return 1
+    if (window.innerWidth < 1280) return 2;
+    return 3;
+}
 
-//write slider
+//write slider arrows
 const ARROW_LEFT = document.querySelector("#pets_arrow-left");
 const ARROW_RIGHT = document.querySelector("#pets_arrow_right");
-//document.querySelectorAll('div#pets_arrow-left')
 ARROW_LEFT.addEventListener("click", () => {
     console.log(document.querySelectorAll('div#pets_arrow-left'));
     alert(ARROW_RIGHT);
