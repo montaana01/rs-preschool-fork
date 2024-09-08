@@ -7,6 +7,9 @@
   }
 }
 @media (max-width: 1000px) {
+  .container {
+    padding: 0 30px;
+  }
   .our_friends {
     &_wrapper {
       padding: 0;
@@ -22,9 +25,69 @@
   }
 }
 @media (max-width: 768px) {
-  .container {
-    padding: 0 30px;
+  .fixed{
+    overflow: hidden;
   }
+  .header{
+    &_hamburger{
+      cursor: pointer;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span{
+        width: 30px;
+        height: 2px;
+        background: #000000;
+      }
+    }
+    &_container{
+      position: fixed;
+      height: 100vh;
+      right: -100%;
+      top: 0;
+      transition: 0.5s all;
+      &_active{
+        right: 0;
+        width: 320px;
+      }
+    }
+
+    &_navigation{
+      position: absolute;
+      display: flex;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: $light-l;
+      flex-direction: column;
+      justify-content: space-around;
+      &>ul{
+        flex-direction: column;
+        row-gap: 40px;
+        align-items: center;
+        .nav_item{
+          font-size: 32px;
+          padding-right: unset !important;
+        }
+      }
+    }
+    &_overlay{
+      position: fixed;
+      display: none;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #211f20;
+      opacity: 0.7;
+      &_active{
+        display: block;
+      }
+    }
+  }
+
   .our_friends {
     padding: 80px 0;
 
@@ -41,25 +104,6 @@
   }
   .footer{
     padding-top: 13px;
-  }
-}
-@media (max-width: 730px) {
-  .header{
-    &_navigation{
-      display: none;
-    }
-    &_hamburger{
-      cursor: pointer;
-      height: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      span{
-        width: 30px;
-        height: 2px;
-        background: #000000;
-      }
-    }
   }
 }
 @media (max-width: 640px){
@@ -91,6 +135,11 @@
   .header{
     &_wrapper{
       padding: 30px 10px;
+    }
+    &_container{
+      &_active{
+        width: 100%;
+      }
     }
   }
   .footer{
