@@ -15,6 +15,19 @@ function toggleMenu() {
     BODY.classList.toggle("fixed");
 }
 OVERLAY.addEventListener("click", toggleMenu);
+//hamburger end
+
+//get data from json
+fetch('./../../assets/pets.json')
+    .then(response => response.json())
+    .then(data => {
+        const PETS = data;
+        //if we have pets in json we use functions to create pets cards
+        //here some functions
+    })
+    .catch(error => console.error('Error while getting data from JSON:',error));
+// get data from json end
+
 
 //write slider
 const ARROW_LEFT = document.querySelector("#pets_arrow-left");
