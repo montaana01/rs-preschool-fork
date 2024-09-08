@@ -1,14 +1,23 @@
 header{
   width: 100%;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+.overflow{
+  transition: 0.5s all;
+  overflow: hidden;
+  &_unset{
+    overflow: unset;
+  }
+}
+
 .header {
-  height: 60px;
-  width: 100%;
   &_wrapper {
+    height: 60px;
+    width: 100%;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -31,6 +40,10 @@ header{
 
   &_hamburger{
     display: none;
+    transition: 0.5s all;
+  }
+  &_hamburger.hamburger_active{
+    transform: rotate(90deg);
   }
 }
 .nav_item {
