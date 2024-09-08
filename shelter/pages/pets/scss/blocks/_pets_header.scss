@@ -1,7 +1,13 @@
 header{
   position: relative;
 }
-
+.overflow{
+  transition: 0.5s all;
+  overflow: hidden;
+  &_unset{
+    overflow: unset;
+  }
+}
 .header {
   &_wrapper {
     background-color: $color-light-xl;
@@ -39,6 +45,10 @@ header{
 
   &_hamburger{
     display: none;
+    transition: 0.5s all;
+  }
+  &_hamburger.hamburger_active{
+    transform: rotate(90deg);
   }
 }
 .nav_item {

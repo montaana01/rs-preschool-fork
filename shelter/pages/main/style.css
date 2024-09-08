@@ -261,16 +261,23 @@ html {
 header {
   width: 100%;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.header {
+.overflow {
+  transition: 0.5s all;
+  overflow: hidden;
+}
+.overflow_unset {
+  overflow: unset;
+}
+
+.header_wrapper {
   height: 60px;
   width: 100%;
-}
-.header_wrapper {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -290,6 +297,10 @@ header {
 }
 .header_hamburger {
   display: none;
+  transition: 0.5s all;
+}
+.header_hamburger.hamburger_active {
+  transform: rotate(90deg);
 }
 
 .nav_item {
@@ -683,6 +694,68 @@ footer {
     width: 170px;
   }
 }
+@media (max-width: 768px) {
+  .fixed {
+    overflow: hidden;
+  }
+  .header_hamburger {
+    cursor: pointer;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 30;
+  }
+  .header_hamburger span {
+    width: 30px;
+    height: 2px;
+    background: #f1cdb3;
+  }
+  .header_container {
+    position: fixed;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    transition: 0.5s all;
+  }
+  .header_container_active {
+    right: 0;
+    width: 320px;
+  }
+  .header_navigation {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #292929;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header_navigation > ul {
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+  }
+  .header_navigation > ul .nav_item {
+    font-size: 32px;
+    padding-right: unset !important;
+  }
+  .header_overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #211f20;
+    opacity: 0.7;
+  }
+  .header_overlay_active {
+    display: block;
+  }
+}
 @media (max-width: 744px) {
   .pets {
     padding: 42px 0;
@@ -709,23 +782,6 @@ footer {
   }
   .pets a {
     margin: 43px auto 0 auto;
-  }
-}
-@media (max-width: 730px) {
-  .header_navigation {
-    display: none;
-  }
-  .header_hamburger {
-    cursor: pointer;
-    height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .header_hamburger span {
-    width: 30px;
-    height: 2px;
-    background: #f1cdb3;
   }
 }
 @media (max-width: 640px) {

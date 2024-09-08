@@ -262,6 +262,14 @@ header {
   position: relative;
 }
 
+.overflow {
+  transition: 0.5s all;
+  overflow: hidden;
+}
+.overflow_unset {
+  overflow: unset;
+}
+
 .header_wrapper {
   background-color: #fff;
   padding: 30px 0 30px 0;
@@ -292,6 +300,10 @@ header {
 }
 .header_hamburger {
   display: none;
+  transition: 0.5s all;
+}
+.header_hamburger.hamburger_active {
+  transform: rotate(90deg);
 }
 
 .nav_item {
@@ -491,6 +503,9 @@ footer {
   }
 }
 @media (max-width: 1000px) {
+  .container {
+    padding: 0 30px;
+  }
   .our_friends_wrapper {
     padding: 0;
     justify-content: center;
@@ -502,8 +517,64 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  .container {
-    padding: 0 30px;
+  .fixed {
+    overflow: hidden;
+  }
+  .header_hamburger {
+    cursor: pointer;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header_hamburger span {
+    width: 30px;
+    height: 2px;
+    background: #000000;
+  }
+  .header_container {
+    position: fixed;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    transition: 0.5s all;
+  }
+  .header_container_active {
+    right: 0;
+    width: 320px;
+  }
+  .header_navigation {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f6f6f6;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header_navigation > ul {
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+  }
+  .header_navigation > ul .nav_item {
+    font-size: 32px;
+    padding-right: unset !important;
+  }
+  .header_overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #211f20;
+    opacity: 0.7;
+  }
+  .header_overlay_active {
+    display: block;
   }
   .our_friends {
     padding: 80px 0;
@@ -519,23 +590,6 @@ footer {
   }
   .footer {
     padding-top: 13px;
-  }
-}
-@media (max-width: 730px) {
-  .header_navigation {
-    display: none;
-  }
-  .header_hamburger {
-    cursor: pointer;
-    height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .header_hamburger span {
-    width: 30px;
-    height: 2px;
-    background: #000000;
   }
 }
 @media (max-width: 640px) {
@@ -565,6 +619,9 @@ footer {
   }
   .header_wrapper {
     padding: 30px 10px;
+  }
+  .header_container_active {
+    width: 100%;
   }
   .footer_wrapper {
     row-gap: unset;
