@@ -64,8 +64,7 @@ function createCarousel(PETS){
                 <button class="border">Learn more</button>
                 `;
             CAROUSEL.appendChild(CARD);
-            const CARD_BUTTON = CARD.querySelector('button');
-            CARD_BUTTON.addEventListener('click', () => showPopup(PET));
+            CARD.addEventListener('click', () => showPopup(PET));
         })
     }
     renderCards(currentPets);
