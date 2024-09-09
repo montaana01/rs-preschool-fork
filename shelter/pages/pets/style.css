@@ -500,6 +500,7 @@ footer {
   .our_friends_wrapper {
     padding: 0;
     justify-content: center;
+    row-gap: 31px;
   }
 }
 @media (max-width: 1000px) {
