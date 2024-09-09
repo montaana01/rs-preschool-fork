@@ -71,6 +71,7 @@ function createPagination(PETS) {
             <h4>${PET.name}</h4>
             <button class="border" data-name="${PET.name}">Learn more</button>
         `;
+        CARD.addEventListener('click', () => showPopup(PET));
         return CARD;
     }
 
@@ -112,6 +113,40 @@ function createPagination(PETS) {
             renderPage(currentPage);
         }
     });
+}
+
+function showPopup(PET) {
+    const CARD = document.getElementById('our_friends_card');
+    const OVERLAY = document.getElementById('our_friends_overlay');
+
+    //put data on popup markup
+    CARD.querySelector('.our_friends_popup-card_img img').src = `./../../assets/images/carousel/${PET.img}`;
+    CARD.querySelector('.our_friends_popup-card_img img').alt = PET.name;
+    CARD.querySelector('.our_friends_popup-card_text h3').textContent = PET.name;
+    CARD.querySelector('#type').textContent = PET.type;
+    CARD.querySelector('#breed').textContent = PET.breed;
+    CARD.querySelector('.our_friends_popup-card_descr p').textContent = PET.description;
+    CARD.querySelector('#age p').innerHTML = `<b>Age: </b>${PET.age}`;
+    CARD.querySelector('#inoculations p').innerHTML = `<b>Inoculations: </b>${PET.inoculations.join(', ')}`;
+    CARD.querySelector('#diseases p').innerHTML = `<b>Diseases: </b>${PET.diseases.join(', ')}`;
+    CARD.querySelector('#parasites p').innerHTML = `<b>Parasites: </b>${PET.parasites.join(', ')}`;
+
+
+    // show popup and overlay
+    CARD.classList.remove('our_friends_popup-hidden');
+    OVERLAY.classList.remove('our_friends_popup-hidden');
+    BODY.classList.toggle("fixed");
+
+    //when we push to close button we close popup
+    document.querySelector('#our_friends_close').addEventListener('click', hidePopup);
+    OVERLAY.addEventListener('click', hidePopup);
+}
+
+function hidePopup() {
+    const CARD = document.getElementById('our_friends_card');
+    const OVERLAY = document.getElementById('our_friends_overlay');
+    CARD.classList.add('our_friends_popup-hidden');
+    OVERLAY.classList.add('our_friends_popup-hidden');
 }
 
 
