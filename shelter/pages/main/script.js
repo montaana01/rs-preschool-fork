@@ -61,9 +61,11 @@ function createCarousel(PETS){
             CARD.innerHTML =`
                 <img src="./../../assets/images/carousel/${PET.img}" alt="${PET.name}"/>
                 <h4>${PET.name}</h4>
-                <button className="border">Learn more</button>
+                <button class="border">Learn more</button>
                 `;
             CAROUSEL.appendChild(CARD);
+            const CARD_BUTTON = CARD.querySelector('button');
+            CARD_BUTTON.addEventListener('click', () => showPopup(PET));
         })
     }
     renderCards(currentPets);
@@ -85,4 +87,37 @@ function createCarousel(PETS){
     window.addEventListener("resize", () => {
         renderCards(currentPets);
     });
+}
+function showPopup(PET) {
+    const CARD = document.getElementById('pets_card');
+    const OVERLAY = document.getElementById('pets_overlay');
+
+    //put data on popup markup
+    CARD.querySelector('.pets_popup-card_img img').src = `./../../assets/images/carousel/${PET.img}`;
+    CARD.querySelector('.pets_popup-card_img img').alt = PET.name;
+    CARD.querySelector('.pets_popup-card_text h3').textContent = PET.name;
+    CARD.querySelector('#type').textContent = PET.type;
+    CARD.querySelector('#breed').textContent = PET.breed;
+    CARD.querySelector('.pets_popup-card_descr p').textContent = PET.description;
+    CARD.querySelector('#age p').innerHTML = `<b>Age: </b>${PET.age}`;
+    CARD.querySelector('#inoculations p').innerHTML = `<b>Inoculations: </b>${PET.inoculations.join(', ')}`;
+    CARD.querySelector('#diseases p').innerHTML = `<b>Diseases: </b>${PET.diseases.join(', ')}`;
+    CARD.querySelector('#parasites p').innerHTML = `<b>Parasites: </b>${PET.parasites.join(', ')}`;
+
+
+    // show popup and overlay
+    CARD.classList.remove('pets_popup-hidden');
+    OVERLAY.classList.remove('pets_popup-hidden');
+    BODY.classList.toggle("fixed");
+
+    //when we push to close button we close popup
+    document.querySelector('#pets_close').addEventListener('click', hidePopup);
+    OVERLAY.addEventListener('click', hidePopup);
+}
+
+function hidePopup() {
+    const CARD = document.getElementById('pets_card');
+    const OVERLAY = document.getElementById('pets_overlay');
+    CARD.classList.add('pets_popup-hidden');
+    OVERLAY.classList.add('pets_popup-hidden');
 }
