@@ -71,8 +71,8 @@ function createCarousel(PETS){
     renderCards(currentPets);
 
     //write slider arrows
-    const ARROW_LEFT = document.querySelector("#pets_arrow-left");
-    const ARROW_RIGHT = document.querySelector("#pets_arrow_right");
+    const ARROW_LEFT = document.getElementById("pets_arrow-left");
+    const ARROW_RIGHT = document.getElementById("pets_arrow-right");
 
     ARROW_LEFT.addEventListener("click", () =>
     {
