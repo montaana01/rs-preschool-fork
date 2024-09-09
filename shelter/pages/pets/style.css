@@ -396,10 +396,13 @@ header {
 .our_friends_carousel-item {
   position: relative;
   display: block;
-  border: 2px solid #cdcdcd;
   border-radius: 100px;
   width: 48px;
   height: 48px;
+  border: 2px solid #f1cdb3;
+  color: #292929;
+  cursor: pointer;
+  transition: 0.5s all;
 }
 .our_friends_carousel-item span {
   position: absolute;
@@ -407,22 +410,21 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.our_friends_carousel > .prev, .our_friends_carousel > .start {
+.our_friends_carousel-item:hover {
+  background-color: #f1cdb3;
+}
+.our_friends_carousel > .disabled {
+  cursor: unset;
   color: #cdcdcd;
+  border: 2px solid #cdcdcd;
+}
+.our_friends_carousel > .disabled:hover {
+  background-color: unset;
 }
 .our_friends_carousel > .number {
   background: #f1cdb3;
   border: 2px solid #f1cdb3;
   transition: 0.5s all;
-}
-.our_friends_carousel > .next, .our_friends_carousel > .end {
-  border: 2px solid #f1cdb3;
-  color: #292929;
-  cursor: pointer;
-  transition: 0.5s all;
-}
-.our_friends_carousel > .next:hover, .our_friends_carousel > .end:hover {
-  background-color: #f1cdb3;
 }
 
 footer {
