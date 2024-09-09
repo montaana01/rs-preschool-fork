@@ -64,15 +64,14 @@ function createCarousel(PETS){
                 <button class="border">Learn more</button>
                 `;
             CAROUSEL.appendChild(CARD);
-            const CARD_BUTTON = CARD.querySelector('button');
-            CARD_BUTTON.addEventListener('click', () => showPopup(PET));
+            CARD.addEventListener('click', () => showPopup(PET));
         })
     }
     renderCards(currentPets);
 
     //write slider arrows
-    const ARROW_LEFT = document.querySelector("#pets_arrow-left");
-    const ARROW_RIGHT = document.querySelector("#pets_arrow_right");
+    const ARROW_LEFT = document.getElementById("pets_arrow-left");
+    const ARROW_RIGHT = document.getElementById("pets_arrow-right");
 
     ARROW_LEFT.addEventListener("click", () =>
     {
