@@ -233,6 +233,10 @@ button:hover {
   width: 100%;
 }
 
+.fixed {
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -606,9 +610,6 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  .fixed {
-    overflow: hidden;
-  }
   .header_hamburger {
     cursor: pointer;
     height: 22px;
