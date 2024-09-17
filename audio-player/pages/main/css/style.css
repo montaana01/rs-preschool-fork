@@ -50,6 +50,34 @@ body {
   row-gap: 30px;
   color: aliceblue;
 }
+.player_item_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.player_item_wrapper_image {
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.player_item_wrapper_image img {
+  height: 100%;
+}
+.player_item_wrapper_controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.player_item_wrapper_controls-control {
+  height: 30px;
+  cursor: pointer;
+}
+.player_item_wrapper_controls-control img {
+  height: 100%;
+}
 
 .footer_wrapper {
   position: fixed;

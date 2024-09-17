@@ -8,4 +8,34 @@
     row-gap: 30px;
     color: $alice;
   }
+  &_item{
+    &_wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 10px;
+      &_image{
+        height: 200px;
+        border-radius: 20px;
+        overflow: hidden;
+        img{
+          height: 100%;
+        }
+      }
+      &_controls{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &-control{
+          height: 30px;
+          cursor: pointer;
+          img{
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
 }
