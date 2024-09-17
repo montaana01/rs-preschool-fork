@@ -1,1 +1,21 @@
-//
+.footer{
+  &_wrapper{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    border-radius: 30px 5px 30px 10px;
+    background: $alice;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  &_logo{
+    height: 60px;
+    img{
+      height: 100%;
+    }
+  }
+}
