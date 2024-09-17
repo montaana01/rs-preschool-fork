@@ -103,5 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-# Some .idea I don't know for what they created automaticly
+# Some .idea and DS_Store files, I don't know for what they created automaticly
 .idea/
+.DS_Store
