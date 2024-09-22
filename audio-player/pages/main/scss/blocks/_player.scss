@@ -34,12 +34,15 @@
           height: 100%;
         }
       }
-      &_text{
+      &_main{
         margin: 0 auto;
+        width: calc(100% - 40px);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         column-gap: 20px;
+        row-gap: 20px;
+        flex-wrap: wrap;
       }
       &_controls{
         position: absolute;
@@ -61,6 +64,12 @@
           }
         }
       }
+      &_progress_bar{
+        flex-basis: 100%;
+        order: 3;
+        width: 100%;
+      }
+
     }
     &_none{
       display: none;

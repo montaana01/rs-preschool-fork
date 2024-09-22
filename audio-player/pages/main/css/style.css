@@ -78,12 +78,15 @@ body {
 .player_item_wrapper_image img {
   height: 100%;
 }
-.player_item_wrapper_text {
+.player_item_wrapper_main {
   margin: 0 auto;
+  width: calc(100% - 40px);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 }
 .player_item_wrapper_controls {
   position: absolute;
@@ -104,6 +107,11 @@ body {
 }
 .player_item_wrapper_controls-control :hover {
   scale: 1.1;
+}
+.player_item_wrapper_progress_bar {
+  flex-basis: 100%;
+  order: 3;
+  width: 100%;
 }
 .player_item_none {
   display: none;

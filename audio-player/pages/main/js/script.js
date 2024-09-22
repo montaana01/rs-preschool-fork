@@ -20,6 +20,7 @@ const PLAY = document.getElementById('play');
 const PAUSE = document.getElementById('pause');
 const FORWARD = document.getElementById('forward');
 const BACKWARD = document.getElementById('backward');
+const PLAYER_MAIN = document.querySelector('.player_item_wrapper_main')
 const AUDIO = document.querySelector('audio');
 const SINGER = document.querySelector('h2');
 const SONG_NAME = document.querySelector('h3');
@@ -77,5 +78,19 @@ BACKWARD.addEventListener('click', () => {
             AUDIO.play();
             break;
     }
+});
+
+const BAR = document.createElement('input');
+BAR.classList.add('player_item_wrapper_progress_bar')
+BAR.type = 'range';
+BAR.min = 0;
+BAR.max = 100;
+BAR.value = 0;
+
+//PLAYER_MAIN.parentNode.insertBefore(BAR, PLAYER_MAIN);
+PLAYER_MAIN.appendChild(BAR);
+
+BAR.addEventListener('input', () => {
+    AUDIO.currentTime = (BAR.value / 100) * AUDIO.duration;
 });
 
