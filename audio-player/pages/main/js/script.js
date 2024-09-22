@@ -87,10 +87,20 @@ BAR.min = 0;
 BAR.max = 100;
 BAR.value = 0;
 
-//PLAYER_MAIN.parentNode.insertBefore(BAR, PLAYER_MAIN);
 PLAYER_MAIN.appendChild(BAR);
 
 BAR.addEventListener('input', () => {
-    AUDIO.currentTime = (BAR.value / 100) * AUDIO.duration;
+    AUDIO.currentTime = BAR.value;
+    if (playerState === "pause") {
+        AUDIO.play();
+        PAUSE.classList.toggle('player_item_none')
+        PLAY.classList.toggle('player_item_none')
+        playerState = "play";
+    }
 });
+
+AUDIO.addEventListener('timeupdate', () => {
+    BAR.max = AUDIO.duration;
+    BAR.value = AUDIO.currentTime;
+})
 
