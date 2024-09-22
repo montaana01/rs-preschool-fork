@@ -1,6 +1,7 @@
+// task points
 console.log(
     'Вёрстка +10\n' +
-    'вёрстка аудиоплеера: есть кнопка Play/Pause, кнопки "Вперёд" и "Назад" для пролистывания аудиотреков, прогресс-бар, отображается название и автор трека +5\n' +
+    'вёрстка аудиоплеера: есть кнопка Play/Pause, кнопки "Вперёд" и "Назад" для пролистывания аудиотреков, прогресс-бар, (прогресса пока нет) отображается название и автор трека +5\n' +
     'в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5\n' +
     'Кнопка Play/Pause +10\n' +
     'есть кнопка Play/Pause, при клике по которой можно запустить или остановить проигрывание аудиотрека +5\n' +
@@ -12,3 +13,57 @@ console.log(
     'Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10\n' +
     'высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо'
 );
+// task points end
+
+// player controls
+const PLAY = document.getElementById('play');
+const PAUSE = document.getElementById('pause');
+const FORWARD = document.getElementById('forward');
+const BACKWARD = document.getElementById('backward');
+const AUDIO = document.querySelector('audio');
+const SINGER = document.querySelector('h3');
+const SONG_NAME = document.querySelector('h4');
+const COVER_IMAGE = document.querySelector('.player_item_wrapper_image img');
+
+// get tracks from json
+let audios = [];
+fetch('./../../assets/audio.json')
+    .then(response => response.json())
+    .then(data => {
+        audios = data;
+        getAudio(0);
+    });
+
+console.log(audios);
+
+let currentTrack = 0;
+
+function getAudio(index) {
+    const TRACK = audios[index];
+    AUDIO.src = TRACK.audioFile;
+    SINGER.textContent = TRACK.artist;
+    SONG_NAME.textContent = TRACK.title;
+    COVER_IMAGE.src = TRACK.imageFile;
+    AUDIO.load();
+}
+
+PLAY.addEventListener('click', () => {
+    AUDIO.play();
+});
+
+PAUSE.addEventListener('click', () => {
+    AUDIO.pause();
+});
+
+FORWARD.addEventListener('click', () => {
+    currentTrack = (currentTrack + 1) % audios.length;
+    getAudio(currentTrack);
+    // AUDIO.play();
+});
+
+BACKWARD.addEventListener('click', () => {
+    currentTrack = (currentTrack - 1 + audios.length) % audios.length;
+    getAudio(currentTrack);
+    // AUDIO.play();
+});
+

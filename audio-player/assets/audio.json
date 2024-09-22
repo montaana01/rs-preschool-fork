@@ -1,0 +1,14 @@
+[
+  {
+    "audioFile": "./../../assets/audio/beyonce.mp3",
+    "artist": "Beyonce",
+    "title": "Don't Hurt Yourself",
+    "imageFile": "./../../assets/images/lemonade.png"
+  },
+  {
+    "audioFile": "./../../assets/audio/dontstartnow.mp3",
+    "artist": "Dua Lipa",
+    "title": "Don't Start Now",
+    "imageFile": "./../../assets/images/dontstartnow.png"
+  }
+]

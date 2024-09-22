@@ -1,4 +1,5 @@
 .player{
+  height: calc(100vh - 140px);
   &_wrapper{
     padding-top: 30px;
     display: flex;
