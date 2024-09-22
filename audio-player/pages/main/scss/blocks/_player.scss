@@ -16,8 +16,8 @@
   &_item{
     &_wrapper{
       position: relative;
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: 500px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,6 +25,7 @@
       row-gap: 10px;
       border-radius: 35px;
       border: #b2b2b2 solid 2px;
+      transition: all 0.5s;
 
       &_image{
         height: 200px;
