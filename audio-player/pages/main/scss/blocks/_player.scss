@@ -16,8 +16,8 @@
   &_item{
     &_wrapper{
       position: relative;
-      width: 350px;
-      height: 350px;
+      width: 500px;
+      height: 500px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,6 +25,7 @@
       row-gap: 10px;
       border-radius: 35px;
       border: #b2b2b2 solid 2px;
+      transition: all 0.5s;
 
       &_image{
         height: 200px;
@@ -38,11 +39,13 @@
         margin: 0 auto;
         width: calc(100% - 40px);
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         column-gap: 20px;
-        row-gap: 20px;
         flex-wrap: wrap;
+        table{
+          flex-basis: 75%;
+        }
       }
       &_controls{
         position: absolute;
@@ -65,9 +68,17 @@
         }
       }
       &_progress_bar{
+        margin-top: 15px;
+        flex-basis: 100%;
+        order: 2;
+        width: 100%;
+      }
+      &_time{
+        margin-top: 5px;
         flex-basis: 100%;
         order: 3;
-        width: 100%;
+        display: flex;
+        justify-content: space-between;
       }
 
     }
