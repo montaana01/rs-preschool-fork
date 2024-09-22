@@ -21,22 +21,21 @@ const PAUSE = document.getElementById('pause');
 const FORWARD = document.getElementById('forward');
 const BACKWARD = document.getElementById('backward');
 const AUDIO = document.querySelector('audio');
-const SINGER = document.querySelector('h3');
-const SONG_NAME = document.querySelector('h4');
+const SINGER = document.querySelector('h2');
+const SONG_NAME = document.querySelector('h3');
 const COVER_IMAGE = document.querySelector('.player_item_wrapper_image img');
 
 // get tracks from json
 let audios = [];
-fetch('./../../assets/audio.json')
+    fetch('./../../assets/audio.json')
     .then(response => response.json())
     .then(data => {
         audios = data;
         getAudio(0);
     });
 
-console.log(audios);
-
 let currentTrack = 0;
+let playerState = "pause";
 
 function getAudio(index) {
     const TRACK = audios[index];
@@ -49,21 +48,34 @@ function getAudio(index) {
 
 PLAY.addEventListener('click', () => {
     AUDIO.play();
+    playerState = "play";
+    PLAY.classList.toggle('player_item_none')
+    PAUSE.classList.toggle('player_item_none')
 });
 
 PAUSE.addEventListener('click', () => {
     AUDIO.pause();
+    playerState = "pause";
+    PAUSE.classList.toggle('player_item_none')
+    PLAY.classList.toggle('player_item_none')
 });
-
 FORWARD.addEventListener('click', () => {
     currentTrack = (currentTrack + 1) % audios.length;
     getAudio(currentTrack);
-    // AUDIO.play();
-});
+    switch(playerState) {
+        case "play":
+            AUDIO.play();
+            break;
+    }
 
+});
 BACKWARD.addEventListener('click', () => {
     currentTrack = (currentTrack - 1 + audios.length) % audios.length;
     getAudio(currentTrack);
-    // AUDIO.play();
+    switch(playerState) {
+        case "play":
+            AUDIO.play();
+            break;
+    }
 });
 
