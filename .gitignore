@@ -106,3 +106,4 @@ dist
 # Some .idea and DS_Store files, I don't know for what they created automaticly
 .idea/
 .DS_Store
+pages/.DS_Store
