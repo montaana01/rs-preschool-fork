@@ -88,6 +88,9 @@ body {
   row-gap: 20px;
   flex-wrap: wrap;
 }
+.player_item_wrapper_main table {
+  flex-basis: 75%;
+}
 .player_item_wrapper_controls {
   position: absolute;
   top: 50%;
