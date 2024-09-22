@@ -46,6 +46,8 @@ function getAudio(index) {
     COVER_IMAGE.src = TRACK.imageFile;
     AUDIO.load();
 }
+//to get duration from start page
+setInterval(updateAudioTime, 1000);
 
 PLAY.addEventListener('click', () => {
     AUDIO.play();
@@ -80,6 +82,7 @@ BACKWARD.addEventListener('click', () => {
     }
 });
 
+//write progress bar code
 const BAR = document.createElement('input');
 BAR.classList.add('player_item_wrapper_progress_bar')
 BAR.type = 'range';
@@ -103,4 +106,25 @@ AUDIO.addEventListener('timeupdate', () => {
     BAR.max = AUDIO.duration;
     BAR.value = AUDIO.currentTime;
 })
+
+//write duration code and current time code
+const TIME = document.createElement('div');
+const CURRENT = document.createElement('div');
+CURRENT.classList.add('player_item_wrapper_time_current')
+const DURATION = document.createElement('div');
+DURATION.classList.add('player_item_wrapper_time_duration')
+TIME.classList.add('player_item_wrapper_time')
+TIME.appendChild(CURRENT);
+TIME.appendChild(DURATION);
+PLAYER_MAIN.appendChild(TIME);
+
+function updateAudioTime() {
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+    CURRENT.textContent = formatTime(AUDIO.currentTime);
+    DURATION.textContent =  formatTime(AUDIO.duration);
+}
 
