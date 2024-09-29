@@ -62,3 +62,18 @@
     }
   }
 }
+#clear-button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+#clear-button:hover {
+  color: #333;
+}

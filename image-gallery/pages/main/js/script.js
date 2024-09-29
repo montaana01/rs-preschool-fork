@@ -16,12 +16,71 @@ console.log('Требования:\n' +
     'высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо\n');
 // task points end
 
+//elements on page
+const GALLERY = document.getElementById('gallery');
+const SEARCH_INPUT = document.getElementById('search_input');
+const SEARCH_BUTTON = document.getElementById('search_button');
+
 //api requests
-//Accept-Version: v1
 const API_TOKEN = "xeky0MrK7bebHvYX-09iZZDHoHO8aqaNWY56Bpd4sXY";
 const IMAGE_API = "https://api.unsplash.com";
 const SEARCH_URL = IMAGE_API + "/search/photos/";
-const REQUEST = SEARCH_URL + "?" + "client_id" + "=" + API_TOKEN;
-console.log(REQUEST);
-const SEARCH_PARAMS = REQUEST + "&" + "query" + "=" + "Hello";
-console.log(SEARCH_PARAMS);
+const INITIAL_QUERY = "programming";
+
+let currentPage = 1;
+let currentQuery = INITIAL_QUERY;
+let totalPages = 1;
+let perPageCount = 12;
+
+
+function fetchImages(query = currentQuery, page = currentPage) {
+    const url = SEARCH_URL + '?client_id=' + API_TOKEN + '&query=' + encodeURIComponent(query)+ '&page=' + page + '&per_page=' + perPageCount;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Ошибка:' + response.status + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            totalPages = data.total_pages;
+            renderImages(data.results);
+        })
+        .catch(error => {
+            console.error('Ошибка при получении данных:', error);
+            GALLERY.innerHTML = `<h2 class="gallery_wrapper_text">Произошла ошибка при загрузке изображений.</h2>`;
+        });
+}
+
+function renderImages(images) {
+    if (images.length === 0) {
+        GALLERY.innerHTML = `<h2 class="gallery_wrapper_text">Нет изображений по вашему запросу.</h2>`;
+        return;
+    }
+
+    GALLERY.innerHTML = images.map(image => `
+        <div class="gallery_wrapper-item">
+            <img src="${image.urls.small}" alt="${image.alt_description || 'Image from Unsplash API'}">
+        </div>
+    `).join('');
+}
+
+function handleSearch() {
+    const query = SEARCH_INPUT.value.trim();
+    currentQuery = query === "" ? INITIAL_QUERY : query;
+    currentPage = 1;
+    fetchImages();
+}
+
+SEARCH_BUTTON.addEventListener('click', handleSearch);
+
+SEARCH_INPUT.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        handleSearch();
+    }
+});
+fetchImages();
+
+

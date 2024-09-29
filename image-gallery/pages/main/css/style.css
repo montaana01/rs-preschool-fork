@@ -89,6 +89,22 @@ body {
   background: pink;
 }
 
+#clear-button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+#clear-button:hover {
+  color: #333;
+}
+
 .gallery_wrapper {
   margin-top: 30px;
   display: grid;
@@ -98,12 +114,46 @@ body {
 }
 .gallery_wrapper-item {
   margin: 0 auto;
+  border-radius: 15px;
   width: 340px;
   height: 240px;
   overflow: hidden;
 }
 .gallery_wrapper-item img {
-  height: 100%;
+  object-fit: cover;
+  float: initial;
+  display: block;
+  line-height: 0;
+}
+.gallery_wrapper_text {
+  text-align: center;
+}
+.gallery_pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.gallery_pagination button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.gallery_pagination button:disabled {
+  background-color: #cccccc;
+  cursor: unset;
+}
+.gallery_pagination button:disabled:not(:disabled) {
+  background-color: #0056b3;
+}
+.gallery_pagination #page-info {
+  font-size: 16px;
+  color: #333;
 }
 
 .footer_wrapper {
