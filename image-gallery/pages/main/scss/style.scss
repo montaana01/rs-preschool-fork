@@ -5,9 +5,13 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  background-color: $alice;
+}
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
   a{
     text-decoration: none;
   }
@@ -25,8 +29,8 @@ html {
 }
 
 @import 'blocks/_header.scss';
+@import 'blocks/_gallery.scss';
 @import 'blocks/_footer.scss';
-
 @import 'base/_media.scss';
 
 
