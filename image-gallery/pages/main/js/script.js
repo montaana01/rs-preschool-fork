@@ -15,3 +15,13 @@ console.log('Требования:\n' +
     'Очень высокое качество оформления приложения и/или дополнительный, не предусмотренный в задании функционал, улучшающий качество приложения +10\n' +
     'высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо\n');
 // task points end
+
+//api requests
+//Accept-Version: v1
+const API_TOKEN = "xeky0MrK7bebHvYX-09iZZDHoHO8aqaNWY56Bpd4sXY";
+const IMAGE_API = "https://api.unsplash.com";
+const SEARCH_URL = IMAGE_API + "/search/photos/";
+const REQUEST = SEARCH_URL + "?" + "client_id" + "=" + API_TOKEN;
+console.log(REQUEST);
+const SEARCH_PARAMS = REQUEST + "&" + "query" + "=" + "Hello";
+console.log(SEARCH_PARAMS);

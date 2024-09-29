@@ -47,11 +47,13 @@ body {
   justify-content: center;
   height: 40px;
   width: 40px;
+  fill: #b1b1b1;
 }
 .header_text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #b1b1b1;
 }
 .header_text h1 {
   font-size: 24px;
@@ -60,7 +62,7 @@ body {
   font-size: 12px;
 }
 .header_search input {
-  background: black;
+  background: #b1b1b1;
   border-radius: 5px;
   border: 2px solid aliceblue;
   width: 200px;
@@ -74,12 +76,11 @@ body {
   outline: none;
 }
 .header_search button {
-  background: black;
+  background: #b1b1b1;
   border-radius: 5px;
   border: 2px solid aliceblue;
   width: 45px;
   height: 35px;
-  transition: all 1s;
 }
 .header_search button svg {
   height: 25px;
@@ -126,7 +127,7 @@ body {
   font-size: 26px;
 }
 .footer_copyright a {
-  color: #000000;
+  color: black;
   transition: all 0.5s;
 }
 .footer_copyright a:hover {
