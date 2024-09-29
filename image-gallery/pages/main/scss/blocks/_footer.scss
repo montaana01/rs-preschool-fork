@@ -1,0 +1,36 @@
+.footer{
+  &_wrapper{
+    margin-top: 30px;
+    height: 60px;
+    width: 100%;
+    border-radius: 50px 50px 0  0;
+    background: $pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    a{
+      transition: all 0.5s ease-in-out;
+      &:hover{
+        scale: 1.2;
+      }
+    }
+  }
+  &_copyright{
+    font-size: 26px;
+    a{
+      color: #000000;
+      transition: all 0.5s ;
+      &:hover{
+        color: $alice;
+      }
+    }
+
+  }
+  &_logo{
+    height: 40px;
+    img{
+      height: 100%;
+    }
+  }
+}

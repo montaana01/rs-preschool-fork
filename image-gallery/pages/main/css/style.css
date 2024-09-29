@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+* a {
+  text-decoration: none;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
+}
+
+.header_wrapper {
+  padding: 0 20px 15px 20px;
+  border-radius: 0 0 50px 50px;
+  background: pink;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.header_image {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+.header_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header_text h1 {
+  font-size: 24px;
+}
+.header_text h2 {
+  font-size: 12px;
+}
+.header_search input {
+  background: black;
+  border-radius: 5px;
+  border: 2px solid aliceblue;
+  width: 200px;
+  height: 35px;
+  color: aliceblue;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.header_search input:focus-visible {
+  background: pink;
+  outline: none;
+}
+.header_search button {
+  background: black;
+  border-radius: 5px;
+  border: 2px solid aliceblue;
+  width: 45px;
+  height: 35px;
+  transition: all 1s;
+}
+.header_search button svg {
+  height: 25px;
+}
+.header_search button:active {
+  background: pink;
+}
+
+.gallery_wrapper {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.gallery_wrapper-item {
+  margin: 0 auto;
+  width: 340px;
+  height: 240px;
+  overflow: hidden;
+}
+.gallery_wrapper-item img {
+  height: 100%;
+}
+
+.footer_wrapper {
+  margin-top: 30px;
+  height: 60px;
+  width: 100%;
+  border-radius: 50px 50px 0 0;
+  background: pink;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.footer_wrapper a {
+  transition: all 0.5s ease-in-out;
+}
+.footer_wrapper a:hover {
+  scale: 1.2;
+}
+.footer_copyright {
+  font-size: 26px;
+}
+.footer_copyright a {
+  color: #000000;
+  transition: all 0.5s;
+}
+.footer_copyright a:hover {
+  color: aliceblue;
+}
+.footer_logo {
+  height: 40px;
+}
+.footer_logo img {
+  height: 100%;
+}
