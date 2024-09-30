@@ -21,6 +21,11 @@ const GALLERY = document.getElementById('gallery');
 const SEARCH_INPUT = document.getElementById('search_input');
 const SEARCH_BUTTON = document.getElementById('search_button');
 
+//when page load focus on input
+window.onload = () => {
+    SEARCH_INPUT.focus();
+};
+
 //api requests
 const API_TOKEN = "xeky0MrK7bebHvYX-09iZZDHoHO8aqaNWY56Bpd4sXY";
 const IMAGE_API = "https://api.unsplash.com";
