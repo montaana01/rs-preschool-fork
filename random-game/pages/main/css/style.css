@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+.btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff0e8;
+  color: #f69893;
+  border: none;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background-color: #ffd2da;
+  font-size: 23px;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 * {
@@ -16,8 +35,108 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: #faf8ef;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
   padding: 0 40px;
+}
+
+.header {
+  background: #f69893;
+  color: #fff0e8;
+}
+.header_wrapper {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_wrapper a {
+  color: #fff0e8;
+  transition: all 0.5s;
+}
+.header_wrapper a:hover {
+  color: #ffd2da;
+}
+.header_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 5px;
+}
+.header_logo h1 {
+  font-size: 52px;
+}
+.header_logo h2 {
+  font-size: 12px;
+}
+
+.game {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game_wrapper {
+  width: 460px;
+  height: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: #bbada0;
+  border-radius: 10px;
+  padding: 10px;
+}
+.game_block {
+  width: 90px;
+  height: 90px;
+  background-color: #cdc1b4;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #776e65;
+  transition: 0.5s all ease;
+}
+.game_block:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  background: #f69893;
+  color: #fff0e8;
+}
+.footer_wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 28px;
+}
+.footer_wrapper a {
+  color: #fff0e8;
+  transition: all 0.5s;
+}
+.footer_wrapper a:hover {
+  color: #ffd2da;
+}
+.footer_wrapper svg, .footer_wrapper img {
+  transition: all 0.5s;
+}
+.footer_wrapper svg:hover, .footer_wrapper img:hover {
+  transform: scale(1.2);
+}
+.footer_logo {
+  height: 40px;
+}
+.footer_logo img {
+  height: 100%;
 }

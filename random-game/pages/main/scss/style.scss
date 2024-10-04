@@ -1,8 +1,10 @@
 @import 'base/_fonts.scss';
 @import 'base/_variables.scss';
+@import 'base/_assets.scss';
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden
 }
 * {
   margin: 0;
@@ -16,6 +18,9 @@ html {
   &::after{
     box-sizing: border-box;
   }
+}
+body{
+  background: $sand;
 }
 .container {
   margin: 0 auto;
