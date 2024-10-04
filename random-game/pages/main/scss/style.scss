@@ -1,5 +1,5 @@
-//@import 'base/_fonts.scss';
-//@import 'base/_variables.scss';
+@import 'base/_fonts.scss';
+@import 'base/_variables.scss';
 
 html {
   scroll-behavior: smooth;
@@ -23,8 +23,8 @@ html {
   padding: 0 40px;
 }
 
-//@import 'blocks/_header.scss';
-//@import 'blocks/_player.scss';
-//@import 'blocks/_footer.scss';
+@import 'blocks/_header.scss';
+@import 'blocks/_game.scss';
+@import 'blocks/_footer.scss';
 
-//@import 'base/_media.scss';
+@import 'base/_media.scss';
