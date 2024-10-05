@@ -1,0 +1,42 @@
+.game{
+  padding: 30px 0;
+  min-height: calc(100vh - 172px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_wrapper{
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: $game-bgn;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  &_block{
+    width: 90px;
+    height: 90px;
+    background-color: $inactive-bgn;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: $inactive-text;
+    transition: 0.5s all ease;
+
+    &.replace{
+      opacity: 0.5;
+      transform: scale(1.15);
+    }
+  }
+}
+.active{
+  transition: 0.5s all ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+}

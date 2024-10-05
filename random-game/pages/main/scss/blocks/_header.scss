@@ -1,0 +1,41 @@
+.header{
+  height: 85px;
+  background: $peach;
+  color: $white;
+  &_wrapper{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      color: $white;
+      transition: all 0.5s ;
+      &:hover{
+        color: $pink;
+      }
+    }
+  }
+  &_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 5px;
+    h1{
+      font-size: 50px;
+    }
+    h2{
+      font-size: 11px;
+    }
+  }
+  &_score{
+    height: 40px;
+    border-radius: 10px;
+    background-color: $white;
+    color: $peach;
+    padding: 5px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
