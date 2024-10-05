@@ -9,3 +9,13 @@ console.log('Вёрстка +10\n' +
     'Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10\n' +
     'высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо'
 );
+// start task
+document.addEventListener('DOMContentLoaded', () => {
+    const GAME_WRAPPER = document.getElementById('wrapper');
+    const RESTART = document.getElementById('restart');
+
+    RESTART.addEventListener('click', () => {
+        //write method that restart game
+        alert('hello world');
+    })
+});

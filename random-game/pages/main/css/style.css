@@ -118,12 +118,16 @@ body {
   color: #776e65;
   transition: 0.5s all ease;
 }
-.game_block:hover {
-  transform: scale(1.1);
-}
 .game_block.replace {
   opacity: 0.5;
   transform: scale(1.15);
+}
+
+.active {
+  transition: 0.5s all ease;
+}
+.active:hover {
+  transform: scale(1.1);
 }
 
 .footer {
@@ -155,4 +159,48 @@ body {
 }
 .footer_logo img {
   height: 100%;
+}
+
+.c2 {
+  background-color: #eee4da;
+}
+
+.c4 {
+  background-color: #ede0c8;
+}
+
+.c8 {
+  background-color: #f2b179;
+}
+
+.c16 {
+  background-color: #f59563;
+}
+
+.c32 {
+  background-color: #f67c5f;
+}
+
+.c64 {
+  background-color: #f65e3b;
+}
+
+.c128 {
+  background-color: #edcf72;
+}
+
+.c256 {
+  background-color: #edcc61;
+}
+
+.c512 {
+  background-color: #edc850;
+}
+
+.c1024 {
+  background-color: #edc53f;
+}
+
+.c2048 {
+  background-color: #edc22e;
 }

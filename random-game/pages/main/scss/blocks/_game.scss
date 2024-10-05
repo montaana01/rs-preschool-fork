@@ -27,12 +27,16 @@
     font-weight: bold;
     color: $inactive-text;
     transition: 0.5s all ease;
-    &:hover{
-      transform: scale(1.1);
-    }
+
     &.replace{
       opacity: 0.5;
       transform: scale(1.15);
     }
+  }
+}
+.active{
+  transition: 0.5s all ease;
+  &:hover{
+    transform: scale(1.1);
   }
 }
