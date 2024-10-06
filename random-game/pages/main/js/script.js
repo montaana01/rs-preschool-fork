@@ -13,9 +13,98 @@ console.log('Вёрстка +10\n' +
 document.addEventListener('DOMContentLoaded', () => {
     const GAME_WRAPPER = document.getElementById('wrapper');
     const RESTART = document.getElementById('restart');
+    const COUNTER = document.getElementById('score');
 
     RESTART.addEventListener('click', () => {
-        //write method that restart game
-        alert('hello world');
-    })
+         startGame();
+    });
+
+    document.addEventListener('keydown',(e) =>{
+        switch (e.key) {
+            case 'ArrowLeft':
+                console.log('Move Left')
+                break;
+            case 'ArrowDown':
+                console.log('Move Down')
+                break;
+            case 'ArrowRight':
+                console.log('Move Right')
+                break;
+            case 'ArrowUp':
+                console.log('Move Up')
+                break;
+            default:
+                return console.log('Something wrong with keyboard listener! Write to author of this game!');
+        }
+    });
+
+    let count = 0;
+    let game_array = [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ];
+    let emptyBlocks = [];
+
+
+    function refreshEmptyBlocks(){
+        for (let row = 0; row < 4; row++) {
+            for (let col = 0; col < 4; col++) {
+                if (game_array[row][col] === 0) {
+                    emptyBlocks.push({ row, col });
+                }
+            }
+        }
+    }
+
+    const GAME_BLOCKS = Array.from(GAME_WRAPPER.getElementsByClassName('game_block'));
+
+    function getWrapperElement(row, col) {
+        return GAME_BLOCKS[row * 4 + col];
+    }
+
+    function addRandomBlock(count){
+        if (emptyBlocks.length === 0){
+            gameOver();
+        }
+
+        for (let i= 0; i < count; i++){
+            const element = emptyBlocks[Math.floor(Math.random() * emptyBlocks.length)];
+
+            let index =  emptyBlocks.indexOf(element);
+            emptyBlocks.splice(index, 1);
+            game_array[element.row][element.col] = Math.random() > 0.6 ? 4 : 2;
+        }
+
+        refreshMarkUp();
+    }
+
+    function refreshMarkUp(){
+        for (let row = 0; row < 4; row++) {
+            for (let col = 0; col < 4; col++) {
+                const BLOCK = getWrapperElement(row, col);
+                const VALUE = game_array[row][col];
+                BLOCK.textContent = VALUE !== 0 ? VALUE : '';
+                BLOCK.className = 'game_block';
+
+                if (VALUE !== 0) {
+                    BLOCK.classList.add('active', `c${VALUE}`);
+                }
+                count += VALUE;
+            }
+        }
+        COUNTER.textContent = count;
+    }
+
+    function gameOver(){
+        return alert('Game Over!');
+    }
+
+    function startGame(){
+        refreshEmptyBlocks();
+        addRandomBlock(2);
+    }
+
+    startGame();
 });
