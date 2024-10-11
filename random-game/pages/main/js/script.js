@@ -26,21 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (e.key) {
             case 'ArrowLeft':
                 move('Left')
-                // move(0);
                 break;
             case 'ArrowDown':
                 move('Down')
-                //move(1);
-
                 break;
             case 'ArrowRight':
                 move('Right');
-                //move(2);
-
                 break;
             case 'ArrowUp':
                 move('Up');
-                //move(3);
                 break;
             default:
                 return console.log('Something wrong with keyboard listener! Write to author of this game!');
@@ -177,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let row = 0; row < SIZE - 1; row++) {
                 if (game_array[row][col] === game_array[row + 1][col] && game_array[row][col] !== 0) {
                     game_array[row][col] *= 2;
+                    score += game_array[row][col];
                     game_array[row + 1][col] = 0;
                 }
             }
@@ -188,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let col = 0; col < SIZE; col++) {
                 if (game_array[row][col] === game_array[row][col + 1] && game_array[row][col] !== 0) {
                     game_array[row][col + 1] *= 2;
+                    score += game_array[row][col];
                     game_array[row][col] = 0;
                 }
             }
