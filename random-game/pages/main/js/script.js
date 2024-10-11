@@ -15,12 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const RESTART = document.getElementById('restart');
     const COUNTER = document.getElementById('score');
     const SIZE = 4; //size of game section
-    const CACHED_SCORE = localStorage.getItem("high_score")
+    const CACHED_SCORE = JSON.parse(localStorage.getItem("high_scores")) || [];
 
-
-    RESTART.addEventListener('click', () => {
-         startGame();
-    });
+    const MODAL = document.getElementById('modal');
+    const CLOSE = document.getElementById('close');
+    const RESTART_MODAL = document.getElementById('restart_modal');
+    const MODAL_HIGH_SCORE = document.getElementById('high_score');
+    const MOVES = document.getElementById('count_moves');
+    const TIME = document.getElementById('spent_time');
+    const MODAL_SCORE = document.getElementById('modal_score');
 
     document.addEventListener('keydown',(e) =>{
         switch (e.key) {
@@ -43,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let moves = 0;
     let score = 0;
+    let timer_interval = null;
+    let total_seconds = 0;
     let game_array = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -73,14 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function isNoWays(game_array) {
-        const LENGTH = game_array.length;
-
         for (let row = 0; row < SIZE; row++) {
             for (let col = 0; col < SIZE; col++) {
-                if (row < LENGTH - 1 && game_array[row][col] === game_array[row + 1][col]) {
+                if (row < SIZE - 1 && game_array[row][col] === game_array[row + 1][col]) {
                     return false;
                 }
-                if (col < LENGTH - 1 && game_array[row][col] === game_array[row][col + 1]) {
+                if (col < SIZE - 1 && game_array[row][col] === game_array[row][col + 1]) {
                     return false;
                 }
             }
@@ -89,26 +92,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addRandomBlock(count) {
+        refreshEmptyBlocks();
         if (emptyBlocks.length === 0 && isNoWays(game_array)) {
             gameOver();
         } else if (emptyBlocks.length === 0){
             console.log('We are doesn\'t have any blocks');
         } else{
             for (let i= 0; i < count; i++){
-                const element = emptyBlocks[Math.floor(Math.random() * emptyBlocks.length)];
+                if (emptyBlocks.length === 0) break;
 
-                let index =  emptyBlocks.indexOf(element);
-                emptyBlocks.splice(index, 1);
-                try{
-                    game_array[element.row][element.col] = Math.random() > 0.6 ? 4 : 2;
-                } catch (e) {
-                    console.log(e);
-                }
+                const randomIndex = Math.floor(Math.random() * emptyBlocks.length);
+                const element = emptyBlocks[randomIndex];
+
+                game_array[element.row][element.col] = Math.random() > 0.6 ? 4 : 2;
+                emptyBlocks.splice(randomIndex, 1);
             }
             refreshMarkUp();
-            if (!(game_array === [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])) {
-                moves++;
-            }
         }
     }
 
@@ -151,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     break;
                 case 'Down':
-                    for (let row = ( SIZE - 1 ); row >= 0; row--) {
+                    for (let row = SIZE - 1; row >= 0; row--) {
                         if (index < temp_col.length) {
                             game_array[row][col] = temp_col[index];
                             index++;
@@ -170,9 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let col = 0; col < SIZE; col++) {
             for (let row = 0; row < SIZE - 1; row++) {
                 if (game_array[row][col] === game_array[row + 1][col] && game_array[row][col] !== 0) {
-                    game_array[row][col] *= 2;
-                    score += game_array[row][col];
-                    game_array[row + 1][col] = 0;
+                    if(direction === 'Up'){
+                        game_array[row][col] *= 2;
+                        score += game_array[row][col];
+                        game_array[row + 1][col] = 0;
+                    } else if(direction === 'Down'){
+                        game_array[row + 1][col] *= 2;
+                        score += game_array[row + 1][col];
+                        game_array[row][col] = 0;
+                    }
                 }
             }
         }
@@ -180,11 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function rowSum(direction){
         for (let row = 0; row < SIZE; row++) {
-            for (let col = 0; col < SIZE; col++) {
+            for (let col = 0; col < SIZE - 1; col++) {
                 if (game_array[row][col] === game_array[row][col + 1] && game_array[row][col] !== 0) {
-                    game_array[row][col + 1] *= 2;
-                    score += game_array[row][col];
-                    game_array[row][col] = 0;
+                    if(direction === 'Left'){
+                        game_array[row][col] *= 2;
+                        score += game_array[row][col];
+                        game_array[row][col + 1] = 0;
+                    } else if(direction === 'Right'){
+                        game_array[row][col + 1] *= 2;
+                        score += game_array[row][col + 1];
+                        game_array[row][col] = 0;
+                    }
                 }
             }
         }
@@ -203,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             switch(direction){
                 case 'Right':
-                    for (let col = (SIZE-1); col >= 0; col--) {
+                    for (let col = SIZE - 1; col >= 0; col--) {
                         if (index < temp_row.length) {
                             game_array[row][col] = temp_row[index];
                             index++;
@@ -230,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function move(direction){
+        const BEFORE = JSON.stringify(game_array);
         let moved = false;
 
         switch (direction) {
@@ -237,47 +249,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 columnMove(direction);
                 columnSum(direction);
                 refreshEmptyBlocks();
-                moved = true;
                 break;
 
             case 'Down':
                 columnMove(direction);
                 columnSum(direction);
                 refreshEmptyBlocks();
-                moved = true;
                 break;
 
             case 'Left':
                 rowMove(direction);
                 rowSum(direction)
-                moved = true;
                 break;
 
             case 'Right':
                 rowMove(direction);
                 rowSum(direction)
-                moved = true;
                 break;
         }
 
+        const AFTER = JSON.stringify(game_array);
+        if (BEFORE !== AFTER) {
+            moved = true;
+        }
+
         if (moved) {
+            moves++;
             refreshMarkUp();
             setTimeout(function () {
                 addRandomBlock(1);
                 refreshMarkUp();
+                if (isNoWays(game_array) && emptyBlocks.length === 0) {
+                    gameOver();
+                }
             }, 300)
         }
     }
 
-    function gameOver(){
-        if (CACHED_SCORE === null){
-            localStorage.setItem("high_score", score);
-            return alert('Game Over!');
+    function gameOver() {
+        stopTimer();
+        updateHighScores(score, total_seconds, moves);
+
+        MODAL_SCORE.textContent = score;
+        MOVES.textContent = moves;
+        TIME.textContent = formatTime(total_seconds);
+        if (CACHED_SCORE.length > 0) {
+            MODAL_HIGH_SCORE.textContent = CACHED_SCORE[0].score;
+        } else {
+            MODAL_HIGH_SCORE.textContent = score;
         }
-        if (CACHED_SCORE < score){
-            localStorage.setItem("high_score", score);
-            return alert('Game Over! High score is: ' + CACHED_SCORE);
-        }
+        MODAL.style.display = "block";
     }
 
     function startGame(){
@@ -287,9 +308,71 @@ document.addEventListener('DOMContentLoaded', () => {
             [0, 0, 0, 0],
             [0, 0, 0, 0]
         ];
+        score = 0;
+        moves = 0;
+        startTimer();
         refreshEmptyBlocks();
+        refreshMarkUp();
         addRandomBlock(2);
     }
+
+    function startTimer() {
+        clearInterval(timer_interval);
+        total_seconds = 0;
+        timer_interval = setInterval(() => {
+            total_seconds++;
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer_interval);
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(total_seconds / 60);
+        const seconds = total_seconds % 60;
+        TIME.textContent = `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    }
+
+    function updateHighScores(SCORE, total_seconds, moves) {
+        const currentDate = new Date();
+        const NEW_SCORE = {
+            score: SCORE,
+            time: formatTime(total_seconds),
+            moves: moves,
+            date: currentDate.toLocaleDateString()
+        };
+        CACHED_SCORE.push(NEW_SCORE);
+        CACHED_SCORE.sort((a, b) => b.score - a.score);
+        const TOP_SCORES = CACHED_SCORE.slice(0, 10);
+        localStorage.setItem("high_scores", JSON.stringify(TOP_SCORES));
+    }
+
+    function formatTime(total_seconds) {
+        const minutes = Math.floor(total_seconds / 60);
+        const seconds = total_seconds % 60;
+        return `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    }
+
+    RESTART.addEventListener('click', () => {
+        startGame();
+    });
+
+    CLOSE.addEventListener('click', () => {
+        MODAL.style.display = "none";
+    });
+
+    RESTART_MODAL.addEventListener('click', () => {
+        MODAL.style.display = "none";
+        startGame();
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === MODAL) {
+            MODAL.style.display = "none";
+        }
+    });
 
     startGame();
 });

@@ -42,6 +42,65 @@
     color: $peach;
     font-weight: 200;
   }
+  &_modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    &_wrapper{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 20px;
+      padding: 20px;
+      border: 1px solid $gray;
+      width: 80%;
+      max-width: 460px;
+      border-radius: 10px;
+      background-color: $sand;
+      &_high-score{
+        color: $pink;
+        font-weight: normal;
+        font-size: 22px;
+        span{
+          font-weight: bold;
+          font-size: 28px;
+        }
+      }
+      &_stats{
+        margin: 0 auto;
+      }
+      &_close-button{
+        color: $gray;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover,:focus{
+          color: $black;
+          text-decoration: none;
+        }
+      }
+      p{
+        font-size: 18px;
+        margin: 10px 0;
+      }
+    }
+  }
 }
 .active{
   transition: 0.5s all ease;
