@@ -132,6 +132,33 @@ body {
   color: #f69893;
   font-weight: 200;
 }
+.game_controls {
+  display: none;
+  margin: 15px auto 0 auto;
+  width: 150px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.game_controls #up {
+  order: 1;
+}
+.game_controls-sides {
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.game_controls #down {
+  order: 3;
+}
+.game_controls > .btn, .game_controls-sides > .btn {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
 .game_modal {
   display: none;
   position: fixed;
@@ -307,4 +334,124 @@ body {
 
 .c524288 {
   background-color: #2400ff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 710px;
+  }
+  .header {
+    height: 60px;
+  }
+  .header_logo h1 {
+    font-size: 30px;
+  }
+  .header_logo h2 {
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .header_score, .header .btn {
+    height: 35px;
+    font-size: 20px;
+  }
+  .game {
+    min-height: calc(100vh - 115px);
+    padding: 15px 0;
+  }
+  .game_wrapper {
+    width: 350px;
+    height: 350px;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .game_block {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+  }
+  .game_controls {
+    display: flex;
+  }
+  .footer_wrapper {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  .footer_wrapper svg, .footer_wrapper img {
+    width: 30px;
+    height: 30px;
+  }
+  .footer_logo {
+    height: 30px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 600px;
+  }
+  .header {
+    height: 45px;
+  }
+  .header_wrapper {
+    padding: 5px 0;
+  }
+  .header_logo h1 {
+    font-size: 20px;
+  }
+  .header_logo h2 {
+    font-size: 7px;
+    font-weight: 200;
+  }
+  .header_score, .header .btn {
+    height: 30px;
+    width: 75px;
+    font-size: 12px;
+  }
+  .game {
+    min-height: calc(100vh - 100px);
+    padding: 15px 0;
+  }
+  .game .container {
+    padding: 0;
+  }
+  .game_wrapper {
+    width: 300px;
+    height: 300px;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .game_block {
+    width: 50px;
+    height: 50px;
+  }
+  .game_controls {
+    width: 130px;
+  }
+  .game_controls > .btn, .game_controls-sides > .btn {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 340px) {
+  .container {
+    margin: 0 10px;
+    max-width: 100%;
+    padding: 0;
+  }
+  .game {
+    min-height: calc(100vh - 100px);
+    padding: 15px 0;
+  }
+  .game_wrapper {
+    width: 250px;
+    height: 250px;
+  }
+  .game_block {
+    width: 37px;
+    height: 37px;
+    font-size: 13px;
+  }
 }
