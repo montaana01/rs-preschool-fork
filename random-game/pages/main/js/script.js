@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const TIME = document.getElementById('spent_time');
     const MODAL_SCORE = document.getElementById('modal_score');
 
+    const UP = document.getElementById('up');
+    const DOWN = document.getElementById('down');
+    const LEFT = document.getElementById('left');
+    const RIGHT = document.getElementById('right');
+
+
     document.addEventListener('keydown',(e) =>{
         switch (e.key) {
             case 'ArrowLeft':
@@ -412,6 +418,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         RESTART_MODAL.disabled = false;
+    });
+
+    UP.addEventListener('click', () =>{
+        move('Up');
+    });
+    DOWN.addEventListener('click', () =>{
+        move('Down');
+    });
+    LEFT.addEventListener('click', () =>{
+        move('Left');
+    });
+    RIGHT.addEventListener('click', () =>{
+        move('Right');
     });
 
     window.addEventListener('click', (e) => {
