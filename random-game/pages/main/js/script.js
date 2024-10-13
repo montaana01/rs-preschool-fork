@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const MODAL = document.getElementById('modal');
     const CLOSE = document.getElementById('close');
+    const MODAL_H2 = MODAL. querySelector('h2');
     const RESTART_MODAL = document.getElementById('restart_modal');
     const MODAL_HIGH_SCORE = document.getElementById('high_score');
     const MOVES = document.getElementById('count_moves');
@@ -44,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    let complete = false;
+    let isGameComplete = false;
     let moves = 0;
     let score = 0;
     let timer_interval = null;
@@ -173,10 +176,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         game_array[row][col] *= 2;
                         score += game_array[row][col];
                         game_array[row + 1][col] = 0;
+                        if (game_array[row][col] === 2048 && !isGameComplete){
+                            complete = true;
+                        }
                     } else if(direction === 'Down'){
                         game_array[row + 1][col] *= 2;
                         score += game_array[row + 1][col];
                         game_array[row][col] = 0;
+                        if (game_array[row + 1][col] === 2048 && !isGameComplete){
+                            complete = true;
+                        }
                     }
                 }
             }
@@ -190,9 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(direction === 'Left'){
                         game_array[row][col] *= 2;
                         score += game_array[row][col];
+                        if (game_array[row][col] === 2048 && !isGameComplete){
+                            complete = true;
+                        }
                         game_array[row][col + 1] = 0;
                     } else if(direction === 'Right'){
                         game_array[row][col + 1] *= 2;
+                        if (game_array[row][col + 1] === 2048 && !isGameComplete) {
+                            complete = true
+                        }
                         score += game_array[row][col + 1];
                         game_array[row][col] = 0;
                     }
@@ -260,11 +275,13 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'Left':
                 rowMove(direction);
                 rowSum(direction)
+                refreshEmptyBlocks();
                 break;
 
             case 'Right':
                 rowMove(direction);
                 rowSum(direction)
+                refreshEmptyBlocks();
                 break;
         }
 
@@ -282,14 +299,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isNoWays(game_array) && emptyBlocks.length === 0) {
                     gameOver();
                 }
+                if (complete && !isGameComplete){
+                    stopTimer();
+                    showModal('Win');
+                    isGameComplete = true;
+                }
             }, 300)
         }
     }
 
-    function gameOver() {
-        stopTimer();
-        updateHighScores(score, total_seconds, moves);
-
+    function showModal(situation){
+        switch (situation) {
+            case 'Win':
+                MODAL_H2.innerHTML = 'Well Done! You reach 2048!';
+                RESTART_MODAL.textContent = 'CONTINUE';
+                break;
+            case 'Loose':
+                MODAL_H2.innerHTML = 'GAME OVER!';
+                RESTART_MODAL.textContent = 'RESTART';
+                break;
+        }
         MODAL_SCORE.textContent = score;
         MOVES.textContent = moves;
         TIME.textContent = formatTime(total_seconds);
@@ -301,6 +330,12 @@ document.addEventListener('DOMContentLoaded', () => {
         MODAL.style.display = "block";
     }
 
+    function gameOver() {
+        stopTimer();
+        updateHighScores(score, total_seconds, moves);
+        showModal('Loose');
+    }
+
     function startGame(){
         game_array = [
             [0, 0, 0, 0],
@@ -310,15 +345,17 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         score = 0;
         moves = 0;
+        complete = false;
+        isGameComplete = false;
         startTimer();
         refreshEmptyBlocks();
         refreshMarkUp();
         addRandomBlock(2);
     }
 
-    function startTimer() {
+    function startTimer(seconds) {
         clearInterval(timer_interval);
-        total_seconds = 0;
+        !seconds ? total_seconds = 0 : total_seconds = seconds;
         timer_interval = setInterval(() => {
             total_seconds++;
             updateTimerDisplay();
@@ -364,8 +401,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     RESTART_MODAL.addEventListener('click', () => {
-        MODAL.style.display = "none";
-        startGame();
+        RESTART_MODAL.disabled = true;
+
+        if (complete) {
+            MODAL.style.display = "none";
+            startTimer(total_seconds);
+        } else {
+            MODAL.style.display = "none";
+            startGame();
+        }
+
+        RESTART_MODAL.disabled = false;
     });
 
     window.addEventListener('click', (e) => {

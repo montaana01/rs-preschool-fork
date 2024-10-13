@@ -191,6 +191,9 @@ body {
   font-size: 18px;
   margin: 10px 0;
 }
+.game_modal_wrapper button {
+  width: 150px;
+}
 
 .active {
   transition: 0.5s all ease;
