@@ -382,7 +382,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const TOP_TABLE = document.querySelector("#top_table tbody");
         TOP_TABLE.innerHTML = '';
 
-        CACHED_SCORE.forEach((entry, index) => {
+        const TOP_SCORES = CACHED_SCORE.slice(0, 10);
+
+        TOP_SCORES.forEach((entry, index) => {
             const ROW = document.createElement('tr');
             const NUMBER_TOP = document.createElement('td');
             const SCORE_TOP = document.createElement('td');
