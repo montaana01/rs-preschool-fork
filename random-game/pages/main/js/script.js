@@ -378,6 +378,32 @@ document.addEventListener('DOMContentLoaded', () => {
         TIME.textContent = `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
     }
 
+    function updateTopTable() {
+        const TOP_TABLE = document.querySelector("#top_table tbody");
+        TOP_TABLE.innerHTML = '';
+
+        CACHED_SCORE.forEach((entry, index) => {
+            const ROW = document.createElement('tr');
+            const NUMBER_TOP = document.createElement('td');
+            const SCORE_TOP = document.createElement('td');
+            const DATE_TOP = document.createElement('td');
+            const MOVES_TOP = document.createElement('td');
+
+            NUMBER_TOP.textContent = index + 1;
+            SCORE_TOP.textContent = entry.score;
+            DATE_TOP.textContent = entry.date;
+            MOVES_TOP.textContent = entry.moves;
+
+            ROW.appendChild(NUMBER_TOP);
+            ROW.appendChild(SCORE_TOP);
+            ROW.appendChild(DATE_TOP);
+            ROW.appendChild(MOVES_TOP);
+
+            TOP_TABLE.appendChild(ROW);
+        });
+    }
+
+
     function updateHighScores(SCORE, total_seconds, moves) {
         const currentDate = new Date();
         const NEW_SCORE = {
@@ -390,6 +416,8 @@ document.addEventListener('DOMContentLoaded', () => {
         CACHED_SCORE.sort((a, b) => b.score - a.score);
         const TOP_SCORES = CACHED_SCORE.slice(0, 10);
         localStorage.setItem("high_scores", JSON.stringify(TOP_SCORES));
+
+        updateTopTable();
     }
 
     function formatTime(total_seconds) {
