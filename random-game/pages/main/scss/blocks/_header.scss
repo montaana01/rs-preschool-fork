@@ -3,6 +3,7 @@
   background: $peach;
   color: $white;
   &_wrapper{
+    position: relative;
     padding: 5px;
     display: flex;
     justify-content: space-between;
@@ -38,5 +39,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &_info{
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    background-color: $white;
+    color: $peach;
+    font-size: 22px;
+    font-weight: 500;
   }
 }

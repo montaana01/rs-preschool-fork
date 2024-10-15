@@ -21,6 +21,7 @@
                     <h1>2048</h1>
                     <h2>by Montaana01</h2>
                 </a>
+                <button class="header_info" id="info"><span>i</span></button>
                 <button class="btn" id="restart">restart</button>
                 <div class="header_score">
                     <p>Score:&nbsp;</p>
@@ -60,12 +61,12 @@
             <div class="down btn" id="down">&#8681;</div>
         </div>
         <div class="game_modal" id="modal">
-            <div class="game_modal_wrapper">
+            <div class="game_modal_wrapper" id="modal_wrapper">
                 <span class="game_modal_wrapper_close-button" id="close">&times;</span>
                 <h2>GAME OVER!</h2>
-                    <div class="game_modal_wrapper_high-score">
-                        <h3>Your score: <span id="modal_score">0</span></h3>
-                    </div>
+                <div class="game_modal_wrapper_high-score">
+                    <h3>Your score: <span id="modal_score">0</span></h3>
+                </div>
                 <table class="game_modal_wrapper_stats">
                         <tr>
                             <td>Count moves:</td>
@@ -80,7 +81,7 @@
                             <td><span id="high_score">0</span></td>
                         </tr>
                     </table>
-                <h3>Top 10 High Scores:</h3>
+                <h3 id="h3">Top 10 High Scores:</h3>
                 <table id="top_table">
                     <thead>
                     <tr>
@@ -94,6 +95,19 @@
                     </tbody>
                 </table>
                 <button id="restart_modal" class="btn">RESTART</button>
+            </div>
+        </div>
+        <div class="game_popup">
+            <div class="game_popup_wrapper">
+                <h2>Как играть в 2048</h2>
+                <p>Управляйте плитками с помощью клавиш со стрелками на клавиатуре:</p>
+                <div class="controls">
+                    <div >⬆️</div>
+                    <div >⬅️</div>
+                    <div >⬇️</div>
+                    <div >➡️</div>
+                </div>
+                <p>Цель игры — соединять одинаковые плитки, чтобы получить плитку с числом 2048!</p>
             </div>
         </div>
     </div>
