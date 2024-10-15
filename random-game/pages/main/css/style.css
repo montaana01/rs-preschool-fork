@@ -51,6 +51,7 @@ body {
   color: #fff0e8;
 }
 .header_wrapper {
+  position: relative;
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -86,6 +87,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header_info {
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: none;
+  background-color: #fff0e8;
+  color: #f69893;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .game {
@@ -221,12 +236,31 @@ body {
 .game_modal_wrapper button {
   width: 150px;
 }
+.game_popup {
+  width: 460px;
+  margin-top: 20px;
+}
+.game_popup_wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f69893;
+  width: 100%;
+  border-radius: 10px;
+  color: #faf8ef;
+}
 
 .active {
   transition: 0.5s all ease;
 }
 .active:hover {
   transform: scale(1.1);
+}
+
+.controls {
+  display: flex;
 }
 
 .footer {

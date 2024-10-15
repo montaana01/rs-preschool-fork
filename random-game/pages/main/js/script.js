@@ -19,12 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const MODAL = document.getElementById('modal');
     const CLOSE = document.getElementById('close');
-    const MODAL_H2 = MODAL. querySelector('h2');
+    const MODAL_H2 = MODAL.querySelector('h2');
+    const MODAL_H3 = document.getElementById('h3');
     const RESTART_MODAL = document.getElementById('restart_modal');
     const MODAL_HIGH_SCORE = document.getElementById('high_score');
     const MOVES = document.getElementById('count_moves');
     const TIME = document.getElementById('spent_time');
     const MODAL_SCORE = document.getElementById('modal_score');
+    const INFO = document.getElementById('info');
 
     const UP = document.getElementById('up');
     const DOWN = document.getElementById('down');
@@ -324,6 +326,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 MODAL_H2.innerHTML = 'GAME OVER!';
                 RESTART_MODAL.textContent = 'RESTART';
                 break;
+            case 'Info':
+                const MODAL_WRAPPER = document.getElementById('modal_wrapper');
+
+                const TOP_TABLE = document.getElementById("top_table");
+                const SCORE_MODAL = document.querySelector('.game_modal_wrapper_high-score')
+                const STATS_MODAL = document.querySelector('.game_modal_wrapper_stats')
+                MODAL_WRAPPER.removeChild(TOP_TABLE);
+                MODAL_WRAPPER.removeChild(SCORE_MODAL);
+                MODAL_WRAPPER.removeChild(STATS_MODAL);
+
+                MODAL_H2.innerHTML = 'Rules of 2048 game:';
+                MODAL_H3.innerHTML = 'Игрок перемещает плитки с помощью клавиш стрелок на клавиатуре (&#8678; &#8679; &#8680; &#8681;). \n • При каждом ходе все плитки перемещаются в указанном направлении. А также добавляется либо 2 либо 4.\n • Если две плитки с одинаковым числом сталкиваются, они объединяются и их значения складываются.\n • Цель — создать плитку с числом 2048.\n • При поялвении плитки со значением 2048 появляется всплывающее окно, символизирующее победу, также там отображается топ 10 очков и количество ходов.';
+                RESTART_MODAL.textContent = 'CONTINUE';
+                break;
         }
         MODAL_SCORE.textContent = score;
         MOVES.textContent = moves;
@@ -463,6 +479,9 @@ document.addEventListener('DOMContentLoaded', () => {
         move('Right');
     });
 
+    INFO.addEventListener('click', () =>{
+        showModal('Info');
+    })
     window.addEventListener('click', (e) => {
         if (e.target === MODAL) {
             MODAL.style.display = "none";
