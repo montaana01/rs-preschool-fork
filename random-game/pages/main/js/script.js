@@ -33,6 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const LEFT = document.getElementById('left');
     const RIGHT = document.getElementById('right');
 
+    const POPUP = document.querySelector('.game_popup');
+
+    window.setTimeout(()=>{
+        console.log(POPUP);
+        POPUP.classList.toggle('active_popup')
+    }, 500);
+    window.setTimeout(() => {
+        POPUP.classList.toggle('active_popup');
+    }, 5000);
 
     document.addEventListener('keydown',(e) =>{
         switch (e.key) {

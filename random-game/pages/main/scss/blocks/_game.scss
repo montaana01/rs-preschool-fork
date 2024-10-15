@@ -4,7 +4,7 @@
   min-height: calc(100vh - 172px);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   &_wrapper{
     width: 460px;
     height: 460px;
@@ -134,6 +134,12 @@
     }
   }
   &_popup{
+    transition: 0.3s all ease;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    opacity: 0;
+    transform: translateX(+50%);
     width: 460px;
     margin-top: 20px;
     &_wrapper{
@@ -157,5 +163,7 @@
 }
 .controls{
   display: flex;
-
+}
+.active_popup{
+  opacity: 1.0;
 }

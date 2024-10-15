@@ -37,6 +37,9 @@
     &_controls {
       display: flex;
     }
+    &_popup {
+      width: 350px;
+    }
   }
 
   .footer{
@@ -109,6 +112,9 @@
         line-height: 40px;
       }
     }
+    &_popup {
+      width: 300px;
+    }
   }
 }
 @media (max-width: 340px) {
@@ -130,6 +136,9 @@
       width: 37px;
       height: 37px;
       font-size: 13px;
+    }
+    &_popup {
+      width: 250px;
     }
   }
 }
