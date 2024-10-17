@@ -83,6 +83,10 @@
       width: 75px;
       font-size: 12px;
     }
+
+    &_info{
+    left: 100px;
+    }
   }
   .game {
     .container{
@@ -122,6 +126,11 @@
     margin: 0 10px;
     max-width: 100%;
     padding: 0;
+  }
+  .header{
+    &_info{
+    left: 70px;
+    }
   }
   .game {
     min-height: calc(100vh - 100px);

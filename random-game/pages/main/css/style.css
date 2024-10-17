@@ -454,6 +454,9 @@ body {
     width: 75px;
     font-size: 12px;
   }
+  .header_info {
+    left: 100px;
+  }
   .game {
     min-height: calc(100vh - 100px);
     padding: 15px 0;
@@ -490,6 +493,9 @@ body {
     margin: 0 10px;
     max-width: 100%;
     padding: 0;
+  }
+  .header_info {
+    left: 70px;
   }
   .game {
     min-height: calc(100vh - 100px);
