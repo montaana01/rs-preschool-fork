@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let complete = false;
     let isGameComplete = false;
+    let isGameOver = false;
     let moves = 0;
     let score = 0;
     let timer_interval = null;
@@ -362,8 +363,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function gameOver() {
+        if (isGameOver) return;
         stopTimer();
         updateHighScores(score, total_seconds, moves);
+        isGameOver = true;
         showModal('Loose');
     }
 
@@ -378,6 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
         moves = 0;
         complete = false;
         isGameComplete = false;
+        isGameOver = false;
         startTimer();
         refreshEmptyBlocks();
         refreshMarkUp();
