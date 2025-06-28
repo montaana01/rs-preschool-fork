@@ -1,0 +1,36 @@
+@import 'base/_fonts.scss';
+@import 'base/_variables.scss';
+@import 'base/_assets.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  a{
+    text-decoration: none;
+  }
+  &::before{
+    box-sizing: border-box;
+  }
+  &::after{
+    box-sizing: border-box;
+  }
+}
+body{
+  background: $sand;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
+}
+
+@import 'blocks/_header.scss';
+@import 'blocks/_game.scss';
+@import 'blocks/_footer.scss';
+
+@import 'base/_colours.scss';
+@import 'base/_media.scss';

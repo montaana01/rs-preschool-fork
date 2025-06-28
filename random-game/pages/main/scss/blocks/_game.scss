@@ -1,0 +1,169 @@
+.game{
+  position: relative;
+  padding: 30px 0;
+  min-height: calc(100vh - 172px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  &_wrapper{
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: $game-bgn;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  &_block{
+    width: 90px;
+    height: 90px;
+    background-color: $inactive-bgn;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: $inactive-text;
+    transition: 0.5s all ease;
+
+    &.replace{
+      opacity: 0.5;
+      transform: scale(1.15);
+    }
+  }
+  &_description{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 8px;
+    color: $peach;
+    font-weight: 200;
+  }
+  &_controls{
+    display: none;
+    margin: 15px auto 0 auto;
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    #up {
+      order: 1;
+    }
+    &-sides {
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    #down {
+      order: 3;
+    }
+    &>.btn, &-sides>.btn {
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+  }
+  &_modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    &_wrapper{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 15px;
+      border: 1px solid $gray;
+      width: 80%;
+      max-width: 460px;
+      border-radius: 10px;
+      background-color: $sand;
+      &_high-score{
+        color: $pink;
+        font-weight: normal;
+        font-size: 22px;
+        span{
+          font-weight: bold;
+          font-size: 28px;
+        }
+      }
+      &_stats{
+        margin: 0 auto;
+      }
+      &_close-button{
+        color: $gray;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover,:focus{
+          color: $black;
+          text-decoration: none;
+        }
+      }
+      p{
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      button{
+        width: 150px;
+      }
+    }
+  }
+  &_popup{
+    transition: 0.3s all ease;
+    position: absolute;
+    bottom: 15px;
+    right: 50%;
+    opacity: 0;
+    transform: translateX(+50%);
+    width: 460px;
+    margin-top: 20px;
+    &_wrapper{
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: $peach;
+      width: 100%;
+      border-radius: 10px;
+      color: $sand;
+    }
+  }
+}
+.active{
+  transition: 0.5s all ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.controls{
+  display: flex;
+}
+.active_popup{
+  opacity: 1.0;
+}

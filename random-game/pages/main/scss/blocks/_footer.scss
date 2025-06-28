@@ -1,0 +1,30 @@
+.footer{
+  background: $peach;
+  color: $white;
+  &_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 28px;
+    a{
+      color: $white;
+      transition: all 0.5s ;
+      &:hover{
+        color: $pink;
+      }
+    }
+    svg, img{
+      transition: all 0.5s ;
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+  }
+  &_logo{
+    height: 40px;
+    img{
+      height: 100%;
+    }
+  }
+}
