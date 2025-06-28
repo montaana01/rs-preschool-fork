@@ -1,0 +1,71 @@
+footer{
+  background: url('./../../assets/images/bg/footer-background.png') center center / cover no-repeat;
+}
+.footer{
+  padding-top: 40px;
+  h3{
+    color: $color-light-xl;
+  }
+  a{
+    text-decoration: none;
+    color: $primary;
+    cursor: pointer;
+    transition: 0.5s all;
+  }
+  a:hover{
+    scale: 1.05;
+  }
+  &_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-item{
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      h4{
+        transition: 0.4s all;
+        color: $primary;
+      }
+      svg{
+        transition: 0.4s all;
+        flex-shrink: 0;
+      }
+      &:hover{
+        h4{
+          color: $primary-light;
+        }
+        svg{
+          scale: 1.05;
+          fill: $primary-light;
+        }
+      }
+      .problem{
+        width: 255px;
+      }
+      &.mt32{
+        margin-top: 32px;
+      }
+      &.mt34{
+        margin-top: 34px;
+      }
+    }
+  }
+  &_contacts{
+    padding-top: 16px;
+    h3{
+      width: 279px;
+    }
+    .footer_wrapper-item{
+      height: 32px;
+    }
+  }
+  &_address{
+    padding-top: 16px;
+    width: 302px;
+  }
+  &_image{
+    font-size: 0;
+  }
+}
