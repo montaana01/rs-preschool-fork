@@ -28,7 +28,7 @@ const COVER_IMAGE = document.querySelector('.player_item_wrapper_image img');
 
 // get tracks from json
 let audios = [];
-    fetch('./../../assets/audio.json')
+    fetch('./assets/audio.json')
     .then(response => response.json())
     .then(data => {
         audios = data;
