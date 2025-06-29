@@ -1,0 +1,66 @@
+@use 'variables';
+
+.c2{
+  background-color: variables.$color2;
+}
+.c4{
+  background-color: variables.$color4;
+}
+.c8 {
+  background-color: variables.$color8;
+}
+.c16{
+  background-color: variables.$color16;
+}
+.c32{
+  background-color: variables.$color32;
+ }
+.c64{
+  background-color: variables.$color64;
+}
+.c128 {
+  background-color: variables.$color128;
+}
+.c256{
+  background-color: variables.$color256;
+}
+.c512{
+  background-color: variables.$color512;
+}
+.c1024{
+  background-color: variables.$color1024;
+ }
+.c2048{
+  background-color: variables.$color2048;
+}
+.c4096{
+  background-color: variables.$color4096;
+}
+.c8192{
+ background-color: variables.$color8192;
+}
+.c16384{
+  background-color: variables.$color16384;
+}
+.c32768{
+  background-color: variables.$color32768;
+}
+.c65536{
+  background-color: variables.$color65536;
+}
+.c131072{
+  background-color: variables.$color131072;
+}
+.c262144 {
+  background-color: variables.$color262144;
+}
+.c524288{
+  background-color: variables.$color524288;
+}
+
+
+
+
+
+
+

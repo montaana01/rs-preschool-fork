@@ -1,7 +1,9 @@
+@use '../base/variables';
+
 .header{
   height: 85px;
-  background: $peach;
-  color: $white;
+  background: variables.$peach;
+  color: variables.$white;
   &_wrapper{
     position: relative;
     padding: 5px;
@@ -9,10 +11,10 @@
     justify-content: space-between;
     align-items: center;
     a{
-      color: $white;
+      color: variables.$white;
       transition: all 0.5s ;
       &:hover{
-        color: $pink;
+        color: variables.$pink;
       }
     }
   }
@@ -32,8 +34,8 @@
   &_score{
     height: 40px;
     border-radius: 10px;
-    background-color: $white;
-    color: $peach;
+    background-color: variables.$white;
+    color: variables.$peach;
     padding: 5px;
     font-size: 22px;
     display: flex;
@@ -49,8 +51,8 @@
     height: 30px;
     border-radius: 100%;
     border: none;
-    background-color: $white;
-    color: $peach;
+    background-color: variables.$white;
+    color: variables.$peach;
     font-size: 22px;
     font-weight: 500;
   }

@@ -1,6 +1,8 @@
+@use '../base/variables';
+
 .footer{
-  background: $peach;
-  color: $white;
+  background: variables.$peach;
+  color: variables.$white;
   &_wrapper{
     display: flex;
     justify-content: space-between;
@@ -8,10 +10,10 @@
     padding: 20px;
     font-size: 28px;
     a{
-      color: $white;
+      color: variables.$white;
       transition: all 0.5s ;
       &:hover{
-        color: $pink;
+        color: variables.$pink;
       }
     }
     svg, img{

@@ -9,6 +9,7 @@ console.log('Вёрстка +10\n' +
     'Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10\n' +
     'высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо'
 );
+
 // start task
 document.addEventListener('DOMContentLoaded', () => {
     const GAME_WRAPPER = document.getElementById('wrapper');
@@ -36,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const POPUP = document.querySelector('.game_popup');
 
     window.setTimeout(()=>{
-        console.log(POPUP);
         POPUP.classList.toggle('active_popup')
     }, 500);
     window.setTimeout(() => {

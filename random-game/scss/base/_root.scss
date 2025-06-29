@@ -1,6 +1,4 @@
-@import 'base/_fonts.scss';
-@import 'base/_variables.scss';
-@import 'base/_assets.scss';
+@use 'variables';
 
 html {
   scroll-behavior: smooth;
@@ -20,17 +18,10 @@ html {
   }
 }
 body{
-  background: $sand;
+  background: variables.$sand;
 }
 .container {
   margin: 0 auto;
   max-width: 1280px;
   padding: 0 40px;
 }
-
-@import 'blocks/_header.scss';
-@import 'blocks/_game.scss';
-@import 'blocks/_footer.scss';
-
-@import 'base/_colours.scss';
-@import 'base/_media.scss';

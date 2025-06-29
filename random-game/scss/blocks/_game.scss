@@ -1,3 +1,5 @@
+@use '../base/variables';
+
 .game{
   position: relative;
   padding: 30px 0;
@@ -11,14 +13,14 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    background-color: $game-bgn;
+    background-color: variables.$game-bgn;
     border-radius: 10px;
     padding: 10px;
   }
   &_block{
     width: 90px;
     height: 90px;
-    background-color: $inactive-bgn;
+    background-color: variables.$inactive-bgn;
     margin: 10px;
     border-radius: 5px;
     display: flex;
@@ -26,7 +28,7 @@
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: $inactive-text;
+    color: variables.$inactive-text;
     transition: 0.5s all ease;
 
     &.replace{
@@ -39,7 +41,7 @@
     right: 5px;
     bottom: 5px;
     font-size: 8px;
-    color: $peach;
+    color: variables.$peach;
     font-weight: 200;
   }
   &_controls{
@@ -92,13 +94,13 @@
       flex-direction: column;
       row-gap: 10px;
       padding: 15px;
-      border: 1px solid $gray;
+      border: 1px solid variables.$gray;
       width: 80%;
       max-width: 460px;
       border-radius: 10px;
-      background-color: $sand;
+      background-color: variables.$sand;
       &_high-score{
-        color: $pink;
+        color: variables.$pink;
         font-weight: normal;
         font-size: 22px;
         span{
@@ -110,7 +112,7 @@
         margin: 0 auto;
       }
       &_close-button{
-        color: $gray;
+        color: variables.$gray;
         float: right;
         font-size: 28px;
         font-weight: bold;
@@ -120,7 +122,7 @@
         cursor: pointer;
         transition: all 0.5s ease;
         &:hover,:focus{
-          color: $black;
+          color: variables.$black;
           text-decoration: none;
         }
       }
@@ -148,10 +150,10 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: $peach;
+      background-color: variables.$peach;
       width: 100%;
       border-radius: 10px;
-      color: $sand;
+      color: variables.$sand;
     }
   }
 }
