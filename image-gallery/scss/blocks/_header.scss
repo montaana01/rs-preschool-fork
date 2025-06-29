@@ -1,8 +1,10 @@
+@use '../base/variables';
+
 .header{
   &_wrapper{
     padding: 0 20px 15px 20px;
     border-radius: 0  0 50px 50px;
-    background: $pink;
+    background: variables.$pink;
     height: 65px;
     display: flex;
     justify-content: space-between;
@@ -18,13 +20,13 @@
     justify-content: center;
     height: 40px;
     width: 40px;
-    fill: $gray;
+    fill: variables.$gray;
   }
   &_text{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: $gray;
+    color: variables.$gray;
     h1{
       font-size: 24px;
     }
@@ -34,30 +36,30 @@
   }
   &_search{
     input{
-      background: $gray;
+      background: variables.$gray;
       border-radius: 5px;
-      border: 2px solid $alice;
+      border: 2px solid variables.$alice;
       width: 200px;
       height: 35px;
-      color: $alice;
+      color: variables.$alice;
       padding: 10px;
       transition: all 0.5s ease-in-out;
       &:focus-visible {
-        background: $pink;
+        background: variables.$pink;
         outline: none;
       }
     }
     button{
-      background: $gray;
+      background: variables.$gray;
       border-radius: 5px;
-      border: 2px solid $alice;
+      border: 2px solid variables.$alice;
       width: 45px;
       height: 35px;
       svg{
         height: 25px;
       }
       &:active {
-        background: $pink;
+        background: variables.$pink;
       }
     }
   }

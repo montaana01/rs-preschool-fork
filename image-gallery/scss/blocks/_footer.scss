@@ -1,10 +1,11 @@
+@use '../base/variables';
 .footer{
   &_wrapper{
     margin-top: 30px;
     height: 60px;
     width: 100%;
     border-radius: 50px 50px 0  0;
-    background: $pink;
+    background: variables.$pink;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -19,10 +20,10 @@
   &_copyright{
     font-size: 26px;
     a{
-      color: $black;
+      color: variables.$black;
       transition: all 0.5s ;
       &:hover{
-        color: $alice;
+        color: variables.$alice;
       }
     }
 
