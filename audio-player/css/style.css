@@ -19,7 +19,7 @@ html {
 body {
   overflow: hidden;
   position: relative;
-  background: url("./../../../assets/images/bg/background.jpg") center center no-repeat;
+  background: url("../assets/images/bg/background.jpg") center center no-repeat;
 }
 
 .container {

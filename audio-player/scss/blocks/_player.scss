@@ -1,3 +1,5 @@
+@use '../base/variables';
+
 .player{
   height: calc(100vh - 140px);
   position: relative;
@@ -11,7 +13,7 @@
     align-items: center;
     justify-content: center;
     row-gap: 30px;
-    color: $alice;
+    color: variables.$alice;
   }
   &_item{
     &_wrapper{
