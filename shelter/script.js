@@ -18,7 +18,7 @@ OVERLAY.addEventListener("click", toggleMenu);
 //hamburger end
 
 //get data from json
-fetch('./../../assets/pets.json')
+fetch('./assets/pets.json')
     .then(response => response.json())
     .then(data => {
         //if we have pets in json we use functions to create pets cards
@@ -58,7 +58,7 @@ function createCarousel(PETS){
             const CARD = document.createElement("div");
             CARD.classList.add("pets_wrapper-item");
             CARD.innerHTML =`
-                <img src="./../../assets/images/carousel/${PET.img}" alt="${PET.name}"/>
+                <img src="./assets/images/carousel/${PET.img}" alt="${PET.name}"/>
                 <h4>${PET.name}</h4>
                 <button class="border">Learn more</button>
                 `;
@@ -91,7 +91,7 @@ function showPopup(PET) {
     const OVERLAY = document.getElementById('pets_overlay');
 
     //put data on popup markup
-    CARD.querySelector('.pets_popup-card_img img').src = `./../../assets/images/carousel/${PET.img}`;
+    CARD.querySelector('.pets_popup-card_img img').src = `./assets/images/carousel/${PET.img}`;
     CARD.querySelector('.pets_popup-card_img img').alt = PET.name;
     CARD.querySelector('.pets_popup-card_text h3').textContent = PET.name;
     CARD.querySelector('#type').textContent = PET.type;

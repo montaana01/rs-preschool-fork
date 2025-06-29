@@ -2,86 +2,86 @@
   font-family: "Georgia Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Georgia Regular"), url("./../../assets/fonts/georgia.woff") format("woff");
+  src: local("Georgia Regular"), url("./assets/fonts/georgia.woff") format("woff");
 }
 @font-face {
   font-family: "Georgia Italic";
   font-style: normal;
   font-weight: normal;
-  src: local("Georgia Italic"), url("./../../assets/fonts/georgiai.woff") format("woff");
+  src: local("Georgia Italic"), url("./assets/fonts/georgiai.woff") format("woff");
 }
 @font-face {
   font-family: "Georgia Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Georgia Bold"), url("./../../assets/fonts/georgiab.woff") format("woff");
+  src: local("Georgia Bold"), url("./assets/fonts/georgiab.woff") format("woff");
 }
 @font-face {
   font-family: "Georgia Bold Italic";
   font-style: normal;
   font-weight: normal;
-  src: local("Georgia Bold Italic"), url("./../../assets/fonts/georgiaz.woff") format("woff");
+  src: local("Georgia Bold Italic"), url("./assets/fonts/georgiaz.woff") format("woff");
 }
 @font-face {
   font-family: "Arial";
-  src: url("./../../assets/fonts/Arial-ItalicMT.eot");
-  src: local("Arial Italic"), local("Arial-ItalicMT"), url("./../../assets/fonts/Arial-ItalicMT.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/Arial-ItalicMT.woff") format("woff"), url("./../../assets/fonts/Arial-ItalicMT.ttf") format("truetype");
+  src: url("./assets/fonts/Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"), url("./assets/fonts/Arial-ItalicMT.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Arial-ItalicMT.woff") format("woff"), url("./assets/fonts/Arial-ItalicMT.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial Narrow";
-  src: url("./../../assets/fonts/ArialNarrow-Bold.eot");
-  src: local("Arial Narrow Bold"), local("ArialNarrow-Bold"), url("./../../assets/fonts/ArialNarrow-Bold.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/ArialNarrow-Bold.woff") format("woff"), url("./../../assets/fonts/ArialNarrow-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/ArialNarrow-Bold.eot");
+  src: local("Arial Narrow Bold"), local("ArialNarrow-Bold"), url("./assets/fonts/ArialNarrow-Bold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/ArialNarrow-Bold.woff") format("woff"), url("./assets/fonts/ArialNarrow-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url("./../../assets/fonts/Arial-BoldItalicMT.eot");
-  src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), url("./../../assets/fonts/Arial-BoldItalicMT.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/Arial-BoldItalicMT.woff") format("woff"), url("./../../assets/fonts/Arial-BoldItalicMT.ttf") format("truetype");
+  src: url("./assets/fonts/Arial-BoldItalicMT.eot");
+  src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), url("./assets/fonts/Arial-BoldItalicMT.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Arial-BoldItalicMT.woff") format("woff"), url("./assets/fonts/Arial-BoldItalicMT.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial Narrow";
-  src: url("./../../assets/fonts/ArialNarrow.eot");
-  src: local("Arial Narrow"), local("ArialNarrow"), url("./../../assets/fonts/ArialNarrow.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/ArialNarrow.woff") format("woff"), url("./../../assets/fonts/ArialNarrow.ttf") format("truetype");
+  src: url("./assets/fonts/ArialNarrow.eot");
+  src: local("Arial Narrow"), local("ArialNarrow"), url("./assets/fonts/ArialNarrow.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/ArialNarrow.woff") format("woff"), url("./assets/fonts/ArialNarrow.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial Narrow";
-  src: url("./../../assets/fonts/ArialNarrow-Italic.eot");
-  src: local("Arial Narrow Italic"), local("ArialNarrow-Italic"), url("./../../assets/fonts/ArialNarrow-Italic.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/ArialNarrow-Italic.woff") format("woff"), url("./../../assets/fonts/ArialNarrow-Italic.ttf") format("truetype");
+  src: url("./assets/fonts/ArialNarrow-Italic.eot");
+  src: local("Arial Narrow Italic"), local("ArialNarrow-Italic"), url("./assets/fonts/ArialNarrow-Italic.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/ArialNarrow-Italic.woff") format("woff"), url("./assets/fonts/ArialNarrow-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial";
-  src: url("./../../assets/fonts/ArialMT.eot");
-  src: local("Arial"), local("ArialMT"), url("./../../assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/ArialMT.woff") format("woff"), url("./../../assets/fonts/ArialMT.ttf") format("truetype");
+  src: url("./assets/fonts/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"), url("./assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/ArialMT.woff") format("woff"), url("./assets/fonts/ArialMT.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url("./../../assets/fonts/Arial-BoldMT.eot");
-  src: local("Arial Bold"), local("Arial-BoldMT"), url("./../../assets/fonts/Arial-BoldMT.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/Arial-BoldMT.woff") format("woff"), url("./../../assets/fonts/Arial-BoldMT.ttf") format("truetype");
+  src: url("./assets/fonts/Arial-BoldMT.eot");
+  src: local("Arial Bold"), local("Arial-BoldMT"), url("./assets/fonts/Arial-BoldMT.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Arial-BoldMT.woff") format("woff"), url("./assets/fonts/Arial-BoldMT.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url("./../../assets/fonts/Arial-Black.eot");
-  src: local("Arial Black"), local("Arial-Black"), url("./../../assets/fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/Arial-Black.woff") format("woff"), url("./../../assets/fonts/Arial-Black.ttf") format("truetype");
+  src: url("./assets/fonts/Arial-Black.eot");
+  src: local("Arial Black"), local("Arial-Black"), url("./assets/fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Arial-Black.woff") format("woff"), url("./assets/fonts/Arial-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial Narrow";
-  src: url("./../../assets/fonts/ArialNarrow-BoldItalic.eot");
-  src: local("Arial Narrow Bold Italic"), local("ArialNarrow-BoldItalic"), url("./../../assets/fonts/ArialNarrow-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./../../assets/fonts/ArialNarrow-BoldItalic.woff") format("woff"), url("./../../assets/fonts/ArialNarrow-BoldItalic.ttf") format("truetype");
+  src: url("./assets/fonts/ArialNarrow-BoldItalic.eot");
+  src: local("Arial Narrow Bold Italic"), local("ArialNarrow-BoldItalic"), url("./assets/fonts/ArialNarrow-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/ArialNarrow-BoldItalic.woff") format("woff"), url("./assets/fonts/ArialNarrow-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
@@ -319,7 +319,7 @@ header {
 .not_only {
   padding-top: 180px;
   width: 100%;
-  background: url(./../../assets/images/bg/start_bg.png) center center/cover no-repeat;
+  background: url(./assets/images/bg/start_bg.png) center center/cover no-repeat;
 }
 .not_only_wrapper {
   display: flex;
@@ -632,7 +632,7 @@ header {
 }
 
 footer {
-  background: url("./../../assets/images/bg/footer-background.png") center center/cover no-repeat;
+  background: url("./assets/images/bg/footer-background.png") center center/cover no-repeat;
 }
 
 .footer {
