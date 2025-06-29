@@ -1,3 +1,5 @@
+@use '../base/variables';
+
 header{
   position: relative;
 }
@@ -10,7 +12,7 @@ header{
 }
 .header {
   &_wrapper {
-    background-color: $color-light-xl;
+    background-color: variables.$color-light-xl;
     padding: 30px 0 30px 0;
     display: flex;
     justify-content: space-between;
@@ -19,10 +21,10 @@ header{
   &_logo{
     a{
       h1{
-        color: $dark-l;
+        color: variables.$dark-l;
       }
       div{
-        color: $dark-3xl;
+        color: variables.$dark-3xl;
       }
     }
   }
@@ -64,8 +66,8 @@ header{
 }
 
 .our_friends_header_title{
-  color: $dark-l;
+  color: variables.$dark-l;
 }
 .our_friends_header_subtitle{
-  color: $dark-3xl;
+  color: variables.$dark-3xl;
 }

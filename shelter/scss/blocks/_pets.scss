@@ -1,7 +1,9 @@
+@use '../base/variables';
+
 .pets {
   padding: 80px 0 100px 0;
   width: 100%;
-  background: $light-l;
+  background: variables.$light-l;
   a{
     text-decoration: none;
     display: block;
@@ -32,7 +34,7 @@
     width: 48px;
     height: 48px;
     border-radius: 100px;
-    border: 2px solid $primary;
+    border: 2px solid variables.$primary;
     transition: 0.5s all;
     cursor: pointer;
     &>svg{
@@ -42,13 +44,12 @@
       transform: translate(-50%, -50%);
     }
     &:hover{
-      background-color: $primary;
+      background-color: variables.$primary;
     }
   }
   &_wrapper {
     position: relative;
-    margin: 0 105px;
-    margin-top: 60px;
+    margin: 60px 105px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     grid-template-rows: 435px;
@@ -61,7 +62,7 @@
       border-radius: 9px;
       width: 270px;
       height: 435px;
-      background-color: $light-s;
+      background-color: variables.$light-s;
 
       img{
         display: block;
@@ -82,9 +83,9 @@
       cursor: pointer;
       transition: 0.5s all;
       &:hover{
-        background: $color-light-xl;
+        background: variables.$color-light-xl;
         &>button{
-          background-color: $primary-light;
+          background-color: variables.$primary-light;
         }
       }
     }
@@ -123,7 +124,7 @@
       height: 500px;
       margin: 0 auto;
       z-index: 100;
-      background: $light-s;
+      background: variables.$light-s;
       box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
       border-radius: 9px;
       &_close{
@@ -177,7 +178,7 @@
         padding-left: 10px;
       }
       &_detailed>li::marker{
-        color: $primary-light;
+        color: variables.$primary-light;
       }
     }
     &-hidden{

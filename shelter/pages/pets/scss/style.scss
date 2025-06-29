@@ -1,33 +1,11 @@
-@import 'base/_fonts.scss';
-@import 'base/_variables.scss';
-@import 'base/_assets.scss';
+@use 'base/fonts';
+@use 'base/variables';
+@use 'base/assets';
 
-html {
-  scroll-behavior: smooth;
-}
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Georgia", sans-serif;
-  a{
-    text-decoration: none;
-  }
-  &::before{
-    box-sizing: border-box;
-  }
-  &::after{
-    box-sizing: border-box;
-  }
-}
+@use 'base/root';
 
-.container {
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0 40px;
-}
+@use 'blocks/pets_header';
+@use 'blocks/our_friends';
+@use 'blocks/footer';
 
-@import 'blocks/_pets_header.scss';
-@import 'blocks/_our_friends.scss';
-@import 'blocks/_footer.scss';
-
-@import 'base/_media.scss';
+@use 'base/media';

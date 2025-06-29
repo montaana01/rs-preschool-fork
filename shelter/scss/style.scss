@@ -1,0 +1,16 @@
+@use 'base/fonts';
+@use 'base/variables';
+@use 'base/assets';
+
+@use 'base/root';
+
+@use 'blocks/header';
+@use 'blocks/not_only';
+@use 'blocks/about';
+@use 'blocks/pets';
+@use 'blocks/help';
+@use 'blocks/donation';
+@use 'blocks/footer';
+
+@use 'base/media';
+

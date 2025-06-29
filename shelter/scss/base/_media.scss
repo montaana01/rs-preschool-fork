@@ -1,3 +1,5 @@
+@use 'variables';
+
 @media (max-width: 1279px) {
   .not_only{
     &_wrapper {
@@ -113,7 +115,7 @@
       span{
         width: 30px;
         height: 2px;
-        background: $primary;
+        background: variables.$primary;
       }
     }
 
@@ -136,7 +138,7 @@
       top: 0;
       width: 100%;
       height: 100vh;
-      background: $dark-3xl;
+      background: variables.$dark-3xl;
       flex-direction: column;
       justify-content: space-around;
       &>ul{
@@ -164,7 +166,7 @@
       }
     }
   }
-  
+
 }
 @media (max-width: 744px) {
   .pets{

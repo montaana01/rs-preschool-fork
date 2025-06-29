@@ -426,8 +426,7 @@ header {
 }
 .pets_wrapper {
   position: relative;
-  margin: 0 105px;
-  margin-top: 60px;
+  margin: 60px 105px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 270px);
   grid-template-rows: 435px;

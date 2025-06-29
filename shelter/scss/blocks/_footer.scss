@@ -1,14 +1,16 @@
+@use '../base/variables';
+
 footer{
   background: url('./../../assets/images/bg/footer-background.png') center center / cover no-repeat;
 }
 .footer{
   padding-top: 40px;
   h3{
-    color: $color-light-xl;
+    color: variables.$color-light-xl;
   }
   a{
     text-decoration: none;
-    color: $primary;
+    color: variables.$primary;
     cursor: pointer;
     transition: 0.5s all;
   }
@@ -26,7 +28,7 @@ footer{
       column-gap: 20px;
       h4{
         transition: 0.4s all;
-        color: $primary;
+        color: variables.$primary;
       }
       svg{
         transition: 0.4s all;
@@ -34,11 +36,11 @@ footer{
       }
       &:hover{
         h4{
-          color: $primary-light;
+          color: variables.$primary-light;
         }
         svg{
           scale: 1.05;
-          fill: $primary-light;
+          fill: variables.$primary-light;
         }
       }
       .problem{

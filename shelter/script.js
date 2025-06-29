@@ -21,10 +21,9 @@ OVERLAY.addEventListener("click", toggleMenu);
 fetch('./../../assets/pets.json')
     .then(response => response.json())
     .then(data => {
-        const PETS = data;
         //if we have pets in json we use functions to create pets cards
         //here some functions
-        createCarousel(PETS);
+        createCarousel(data);
     })
     .catch(error => console.error('Error while getting data from JSON:',error));
 // get data from json end

@@ -1,49 +1,57 @@
-h2{
+@use 'variables';
+
+h2 {
   font-weight: 400;
   font-size: 44px;
   line-height: 130%;
-  color: $dark-l;
+  color: variables.$dark-l;
 }
-h3{
+
+h3 {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  color: $dark-l;
+  color: variables.$dark-l;
 
 }
-h4{
+
+h4 {
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
-  color: $dark-l;
+  color: variables.$dark-l;
 }
-h5{
+
+h5 {
   font-weight: 400;
   font-size: 15px;
   line-height: 110%;
   letter-spacing: 0.06em;
-  color: $dark-l;
+  color: variables.$dark-l;
 }
-p{
+
+p {
   font-family: "Arial", sans-serif;
-  &.l{
+
+  &.l {
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
-    color: $dark-xl;
+    color: variables.$dark-xl;
   }
-  &.s{
+
+  &.s {
     font-style: italic;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
-    color: $dark-m;
+    color: variables.$dark-m;
   }
 }
 
-button{
+button {
   border-radius: 100px;
   padding: 15px 45px;
   width: 207px;
@@ -52,92 +60,106 @@ button{
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  color: $dark-3xl;
-  background-color: $primary;
+  color: variables.$dark-3xl;
+  background-color: variables.$primary;
   cursor: pointer;
   border: 0;
   transition: 0.5s all;
-  &:hover{
-    background-color: $primary-light;
+
+  &:hover {
+    background-color: variables.$primary-light;
   }
 }
-.border{
-  border: 2px solid $primary;
-  background-color: $color-light-xl;
+
+.border {
+  border: 2px solid variables.$primary;
+  background-color: variables.$color-light-xl;
   border-radius: 100px;
   padding: 15px 45px;
   width: 207px;
   height: 52px;
 }
-.title{
+
+.title {
   margin: 0;
-  color: $primary;
+  color: variables.$primary;
   font-weight: 400;
   font-size: 32px;
   line-height: 110%;
   letter-spacing: 0.06em;
 }
-.subtitle{
+
+.subtitle {
   font-family: "Arial", sans-serif;
-  color: $color-light-xl;
+  color: variables.$color-light-xl;
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.1em;
 }
-.link{
+
+.link {
   text-decoration: none;
-  color: $dark-s;
+  color: variables.$dark-s;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
   cursor: pointer;
   transition: 0.5s all;
-  &:hover{
-    color:$light-s;
+
+  &:hover {
+    color: variables.$light-s;
   }
-  a{
+
+  a {
     text-decoration: none;
-    color: $dark-s;
+    color: variables.$dark-s;
     transition: 0.5s all;
-    &:hover{
-      color:$light-s;
+
+    &:hover {
+      color: variables.$light-s;
     }
   }
-  &_black{
-    color: $dark-l;
+
+  &_black {
+    color: variables.$dark-l;
     cursor: pointer;
     transition: 0.5s all;
+
     a {
       font-family: "Arial", sans-serif;
       text-decoration: none;
-      color: $dark-l;
+      color: variables.$dark-l;
       transition: 0.5s all;
     }
+
     a:hover {
-      color: $dark-3xl;
+      color: variables.$dark-3xl;
     }
-    &:hover{
-      color:$dark-3xl;
+
+    &:hover {
+      color: variables.$dark-3xl;
     }
   }
 
 }
-.active{
-   color:$light-s;
- }
-.link_black.active{
-  color: $dark-l;
+
+.active {
+  color: variables.$light-s;
 }
 
-.active::after{
+.link_black.active {
+  color: variables.$dark-l;
+}
+
+.active::after {
   content: "";
   display: block;
   bottom: -3px;
   height: 3px;
-  background-color: $primary;
+  background-color: variables.$primary;
   width: 100%;
 }
 
-.fixed{
+.fixed {
   overflow: hidden;
 }

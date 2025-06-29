@@ -1,3 +1,5 @@
+@use '../base/variables';
+
 .not_only{
   padding-top: 180px;
   width: 100%;
@@ -9,12 +11,12 @@
       h2{
         margin-top: 163px;
         width: 310px;
-        color: $color-light-xl;
+        color: variables.$color-light-xl;
       }
       p{
         margin-top: 42px;
         width: 460px;
-        color: $dark-s;
+        color: variables.$dark-s;
       }
       img{
         float: right;

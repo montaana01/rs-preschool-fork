@@ -1,107 +1,129 @@
-.our_friends{
+@use '../base/variables';
+
+.our_friends {
   padding: 80px 0 100px 0;
   width: 100%;
-  background: $light-l;
-  &_header{
+  background: variables.$light-l;
+
+  &_header {
     text-align: center;
     width: 400px;
     margin: 0 auto;
   }
-  &_wrapper{
+
+  &_wrapper {
     height: 932px;
     margin-top: 45px;
     padding: 15px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
-    grid-template-rows: repeat(2,435px);
+    grid-template-rows: repeat(2, 435px);
     grid-auto-columns: 270px;
     grid-auto-flow: row;
     overflow: hidden;
     column-gap: 40px;
     row-gap: 30px;
-    &-item{
+
+    &-item {
       border-radius: 9px;
       width: 270px;
       height: 435px;
-      background-color: $light-s;
-      img{
+      background-color: variables.$light-s;
+
+      img {
         display: block;
         line-height: 0;
       }
-      h4{
+
+      h4 {
         margin-top: 30px;
         text-align: center;
       }
-      &>button {
+
+      & > button {
         display: block;
         width: 187px;
         padding: 15px 42px;
         margin: 30px auto;
       }
+
       cursor: pointer;
       transition: 0.5s all;
-      &:hover{
-        background: $color-light-xl;
-        &>button{
-          background-color: $primary-light;
+
+      &:hover {
+        background: variables.$color-light-xl;
+
+        & > button {
+          background-color: variables.$primary-light;
         }
       }
     }
   }
-  &_button{
+
+  &_button {
     padding: 0;
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
   }
-  &_carousel{
+
+  &_carousel {
     margin: 0 auto;
     padding-top: 45px;
     display: flex;
     width: 340px;
     justify-content: space-between;
     align-items: center;
-    &-item{
+
+    &-item {
       position: relative;
       display: block;
       border-radius: 100px;
       width: 48px;
       height: 48px;
-      span{
+
+      span {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-      border: 2px solid $primary;
-      color: $dark-3xl;
+
+      border: 2px solid variables.$primary;
+      color: variables.$dark-3xl;
       cursor: pointer;
       transition: 0.5s all;
-      &:hover{
-        background-color: $primary;
+
+      &:hover {
+        background-color: variables.$primary;
       }
     }
-    &>.disabled{
+
+    & > .disabled {
       cursor: unset;
-      color: $dark-s;
-      border: 2px solid $dark-s;
-      &:hover{
+      color: variables.$dark-s;
+      border: 2px solid variables.$dark-s;
+
+      &:hover {
         background-color: unset;
       }
     }
-    &>.number{
-      background: $primary;
-      border: 2px solid $primary;
+
+    & > .number {
+      background: variables.$primary;
+      border: 2px solid variables.$primary;
       transition: 0.5s all;
     }
   }
-  &_popup{
+
+  &_popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    &-overlay{
+
+    &-overlay {
       position: fixed;
       display: block;
       z-index: 1;
@@ -114,17 +136,19 @@
       opacity: 0.7;
       overflow: hidden;
     }
-    &-card{
+
+    &-card {
       position: relative;
       display: block;
       width: 900px;
       height: 500px;
       margin: 0 auto;
       z-index: 100;
-      background: $light-s;
+      background: variables.$light-s;
       box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
       border-radius: 9px;
-      &_close{
+
+      &_close {
         display: block;
         position: absolute;
         top: -48px;
@@ -134,51 +158,61 @@
         border-radius: 100px;
         border: 2px solid #f1cdb3;
         cursor: pointer;
-        svg{
+
+        svg {
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
       }
-      &_wrapper{
+
+      &_wrapper {
         height: 100%;
         display: flex;
         column-gap: 29px;
       }
-      &_img{
+
+      &_img {
         height: 100%;
-        img{
+
+        img {
           border-radius: 9px 0 0 9px;
           height: 100%;
           line-height: 0;
           font-size: 0;
         }
       }
-      &_text{
+
+      &_text {
         padding-top: 50px;
         padding-right: 20px;
       }
-      &_type{
+
+      &_type {
         padding-top: 10px;
         display: flex;
-        column-gap:6px;
+        column-gap: 6px;
       }
-      &_descr{
+
+      &_descr {
         padding: 40px 0;
         color: #000;
       }
-      &_detailed{
+
+      &_detailed {
         display: flex;
         flex-direction: column;
         row-gap: 10px;
         padding-left: 10px;
       }
-      &_detailed>li::marker{
-        color: $primary-light;
+
+      &_detailed > li::marker {
+        color: variables.$primary-light;
       }
     }
-    &-hidden{
+
+    &-hidden {
       display: none;
     }
   }
